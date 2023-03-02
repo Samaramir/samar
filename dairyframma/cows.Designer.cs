@@ -83,7 +83,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 692);
+            this.panel1.Size = new System.Drawing.Size(213, 692);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -91,9 +91,9 @@
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(200, 0);
+            this.panel2.Location = new System.Drawing.Point(213, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(909, 41);
+            this.panel2.Size = new System.Drawing.Size(896, 41);
             this.panel2.TabIndex = 1;
             // 
             // label3
@@ -464,7 +464,7 @@
             this.panel3.Controls.Add(this.label3);
             this.panel3.Location = new System.Drawing.Point(3, 144);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(194, 50);
+            this.panel3.Size = new System.Drawing.Size(207, 50);
             this.panel3.TabIndex = 10;
             // 
             // pictureBox1
@@ -472,7 +472,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(65, 44);
+            this.pictureBox1.Size = new System.Drawing.Size(72, 44);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
@@ -481,9 +481,9 @@
             // 
             this.panel4.Controls.Add(this.pictureBox2);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(12, 222);
+            this.panel4.Location = new System.Drawing.Point(0, 204);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(170, 50);
+            this.panel4.Size = new System.Drawing.Size(210, 50);
             this.panel4.TabIndex = 11;
             // 
             // pictureBox2
@@ -500,11 +500,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(97, 14);
+            this.label4.Location = new System.Drawing.Point(74, 16);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 24);
+            this.label4.Size = new System.Drawing.Size(139, 24);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Cows";
+            this.label4.Text = "Milk Production";
             // 
             // cows
             // 
