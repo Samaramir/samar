@@ -14,3 +14,4 @@ C:\Users\samar\source\repos\dairyframma\dairyframma\obj\Debug\dairyframma.exe
 C:\Users\samar\source\repos\dairyframma\dairyframma\obj\Debug\dairyframma.pdb
 C:\Users\samar\source\repos\dairyframma\dairyframma\obj\Debug\dairyframma.cows.resources
 C:\Users\samar\source\repos\dairyframma\dairyframma\bin\Debug\Guna.UI2.dll
+C:\Users\samar\source\repos\dairyframma\dairyframma\obj\Debug\dairyframma.Mailk_Producation.resources

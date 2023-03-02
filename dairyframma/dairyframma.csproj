@@ -67,6 +67,12 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mailk Producation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mailk Producation.Designer.cs">
+      <DependentUpon>Mailk Producation.cs</DependentUpon>
+    </Compile>
     <Compile Include="splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mailk Producation.resx">
+      <DependentUpon>Mailk Producation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="splash.resx">
       <DependentUpon>splash.cs</DependentUpon>
