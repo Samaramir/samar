@@ -69,6 +69,28 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.label23 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
@@ -78,11 +100,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.panel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            this.panel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
@@ -541,6 +579,226 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Healthy";
             // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panel6.Controls.Add(this.panel13);
+            this.panel6.Controls.Add(this.panel12);
+            this.panel6.Controls.Add(this.panel11);
+            this.panel6.Controls.Add(this.panel10);
+            this.panel6.Controls.Add(this.panel7);
+            this.panel6.Controls.Add(this.panel8);
+            this.panel6.Controls.Add(this.panel9);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(213, 692);
+            this.panel6.TabIndex = 13;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.pictureBox4);
+            this.panel7.Controls.Add(this.label17);
+            this.panel7.Location = new System.Drawing.Point(3, 274);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(207, 50);
+            this.panel7.TabIndex = 12;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(0, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(75, 44);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 10;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(109, 15);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(73, 24);
+            this.label17.TabIndex = 9;
+            this.label17.Text = "Healthy";
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.pictureBox5);
+            this.panel8.Controls.Add(this.label18);
+            this.panel8.Location = new System.Drawing.Point(0, 208);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(210, 50);
+            this.panel8.TabIndex = 11;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(65, 44);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 10;
+            this.pictureBox5.TabStop = false;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(74, 16);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(139, 24);
+            this.label18.TabIndex = 9;
+            this.label18.Text = "Milk Production";
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.pictureBox6);
+            this.panel9.Controls.Add(this.label19);
+            this.panel9.Location = new System.Drawing.Point(3, 144);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(207, 50);
+            this.panel9.TabIndex = 10;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(72, 44);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 10;
+            this.pictureBox6.TabStop = false;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(97, 14);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(57, 24);
+            this.label19.TabIndex = 9;
+            this.label19.Text = "Cows";
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.pictureBox7);
+            this.panel10.Controls.Add(this.label20);
+            this.panel10.Location = new System.Drawing.Point(3, 342);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(207, 50);
+            this.panel10.TabIndex = 13;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(72, 44);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 10;
+            this.pictureBox7.TabStop = false;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(97, 13);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(87, 24);
+            this.label20.TabIndex = 9;
+            this.label20.Text = "Breeding";
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.pictureBox8);
+            this.panel11.Controls.Add(this.label21);
+            this.panel11.Location = new System.Drawing.Point(3, 413);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(207, 50);
+            this.panel11.TabIndex = 14;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(72, 44);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 10;
+            this.pictureBox8.TabStop = false;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(97, 13);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(91, 24);
+            this.label21.TabIndex = 9;
+            this.label21.Text = "Milk sales";
+            this.label21.Click += new System.EventHandler(this.label21_Click);
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.pictureBox9);
+            this.panel12.Controls.Add(this.label22);
+            this.panel12.Location = new System.Drawing.Point(0, 483);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(207, 50);
+            this.panel12.TabIndex = 15;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(72, 44);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 10;
+            this.pictureBox9.TabStop = false;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(97, 13);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(91, 24);
+            this.label22.TabIndex = 9;
+            this.label22.Text = "Milk sales";
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.pictureBox10);
+            this.panel13.Controls.Add(this.label23);
+            this.panel13.Location = new System.Drawing.Point(3, 557);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(207, 50);
+            this.panel13.TabIndex = 16;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(72, 44);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 10;
+            this.pictureBox10.TabStop = false;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(97, 13);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(91, 24);
+            this.label23.TabIndex = 9;
+            this.label23.Text = "Milk sales";
+            // 
             // cows
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -593,6 +851,28 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -637,5 +917,27 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Label label22;
     }
 }
