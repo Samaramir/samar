@@ -1,0 +1,14 @@
+C:\Users\samar\source\repos\dairyframma\dairyframma\bin\Debug\dairyframma.exe.config
+C:\Users\samar\source\repos\dairyframma\dairyframma\bin\Debug\dairyframma.exe
+C:\Users\samar\source\repos\dairyframma\dairyframma\bin\Debug\dairyframma.pdb
+C:\Users\samar\source\repos\dairyframma\dairyframma\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Users\samar\source\repos\dairyframma\dairyframma\obj\Debug\dairyframma.csproj.AssemblyReference.cache
+C:\Users\samar\source\repos\dairyframma\dairyframma\obj\Debug\dairyframma.csproj.SuggestedBindingRedirects.cache
+C:\Users\samar\source\repos\dairyframma\dairyframma\obj\Debug\dairyframma.login.resources
+C:\Users\samar\source\repos\dairyframma\dairyframma\obj\Debug\dairyframma.splash.resources
+C:\Users\samar\source\repos\dairyframma\dairyframma\obj\Debug\dairyframma.Properties.Resources.resources
+C:\Users\samar\source\repos\dairyframma\dairyframma\obj\Debug\dairyframma.csproj.GenerateResource.cache
+C:\Users\samar\source\repos\dairyframma\dairyframma\obj\Debug\dairyframma.csproj.CoreCompileInputs.cache
+C:\Users\samar\source\repos\dairyframma\dairyframma\obj\Debug\dairyframma.csproj.CopyComplete
+C:\Users\samar\source\repos\dairyframma\dairyframma\obj\Debug\dairyframma.exe
+C:\Users\samar\source\repos\dairyframma\dairyframma\obj\Debug\dairyframma.pdb
