@@ -16,3 +16,4 @@ C:\Users\samar\source\repos\dairyframma\dairyframma\obj\Debug\dairyframma.cows.r
 C:\Users\samar\source\repos\dairyframma\dairyframma\bin\Debug\Guna.UI2.dll
 C:\Users\samar\source\repos\dairyframma\dairyframma\obj\Debug\dairyframma.Mailk_Producation.resources
 C:\Users\samar\source\repos\dairyframma\dairyframma\obj\Debug\dairyframma.cowHealth.resources
+C:\Users\samar\source\repos\dairyframma\dairyframma\obj\Debug\dairyframma.MilkSales.resources
