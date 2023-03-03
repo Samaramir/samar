@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace dairyframma
 {
-    public partial class Breeding : Form
+    public partial class DashBoard : Form
     {
-        public Breeding()
+        public DashBoard()
         {
             InitializeComponent();
-        }
-
-        private void Breeding_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel9_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
