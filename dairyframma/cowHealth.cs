@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace dairyframma
 {
-    public partial class cows : Form
+    public partial class cowHealth : Form
     {
-        public cows()
+        public cowHealth()
         {
             InitializeComponent();
-        }
-
-        private void label21_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel9_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

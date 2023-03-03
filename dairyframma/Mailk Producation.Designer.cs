@@ -71,14 +71,10 @@
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuMaterialTextbox7 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.label15 = new System.Windows.Forms.Label();
             this.bunifuMaterialTextbox6 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label14 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.bunifuMaterialTextbox5 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.bunifuMaterialTextbox3 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -94,6 +90,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel5.SuspendLayout();
@@ -364,7 +362,7 @@
             // 
             // panel8
             // 
-            this.panel8.BackColor = System.Drawing.Color.Gray;
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel8.Controls.Add(this.pictureBox5);
             this.panel8.Controls.Add(this.label18);
             this.panel8.Location = new System.Drawing.Point(0, 233);
@@ -535,9 +533,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(250, 96);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 20);
+            this.label6.Size = new System.Drawing.Size(58, 20);
             this.label6.TabIndex = 61;
-            this.label6.Text = "Cow Name";
+            this.label6.Text = "Cow Id";
             // 
             // bunifuMaterialTextbox1
             // 
@@ -558,35 +556,6 @@
             this.bunifuMaterialTextbox1.TabIndex = 60;
             this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // bunifuMaterialTextbox7
-            // 
-            this.bunifuMaterialTextbox7.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuMaterialTextbox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox7.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox7.HintText = "";
-            this.bunifuMaterialTextbox7.isPassword = false;
-            this.bunifuMaterialTextbox7.LineFocusedColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuMaterialTextbox7.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox7.LineMouseHoverColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuMaterialTextbox7.LineThickness = 4;
-            this.bunifuMaterialTextbox7.Location = new System.Drawing.Point(922, 220);
-            this.bunifuMaterialTextbox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuMaterialTextbox7.Name = "bunifuMaterialTextbox7";
-            this.bunifuMaterialTextbox7.Size = new System.Drawing.Size(177, 28);
-            this.bunifuMaterialTextbox7.TabIndex = 59;
-            this.bunifuMaterialTextbox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(933, 191);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(54, 20);
-            this.label15.TabIndex = 58;
-            this.label15.Text = "pastur";
-            // 
             // bunifuMaterialTextbox6
             // 
             this.bunifuMaterialTextbox6.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -599,7 +568,7 @@
             this.bunifuMaterialTextbox6.LineIdleColor = System.Drawing.Color.Gray;
             this.bunifuMaterialTextbox6.LineMouseHoverColor = System.Drawing.Color.MidnightBlue;
             this.bunifuMaterialTextbox6.LineThickness = 4;
-            this.bunifuMaterialTextbox6.Location = new System.Drawing.Point(704, 220);
+            this.bunifuMaterialTextbox6.Location = new System.Drawing.Point(578, 220);
             this.bunifuMaterialTextbox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuMaterialTextbox6.Name = "bunifuMaterialTextbox6";
             this.bunifuMaterialTextbox6.Size = new System.Drawing.Size(177, 28);
@@ -610,18 +579,11 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(706, 191);
+            this.label14.Location = new System.Drawing.Point(574, 187);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(108, 20);
+            this.label14.Size = new System.Drawing.Size(75, 20);
             this.label14.TabIndex = 56;
-            this.label14.Text = "widget of birth";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(241, 222);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 29);
-            this.dateTimePicker1.TabIndex = 55;
+            this.label14.Text = "Total Milk";
             // 
             // bunifuMaterialTextbox5
             // 
@@ -635,7 +597,7 @@
             this.bunifuMaterialTextbox5.LineIdleColor = System.Drawing.Color.Gray;
             this.bunifuMaterialTextbox5.LineMouseHoverColor = System.Drawing.Color.MidnightBlue;
             this.bunifuMaterialTextbox5.LineThickness = 4;
-            this.bunifuMaterialTextbox5.Location = new System.Drawing.Point(462, 220);
+            this.bunifuMaterialTextbox5.Location = new System.Drawing.Point(335, 220);
             this.bunifuMaterialTextbox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuMaterialTextbox5.Name = "bunifuMaterialTextbox5";
             this.bunifuMaterialTextbox5.Size = new System.Drawing.Size(177, 28);
@@ -646,21 +608,11 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(459, 191);
+            this.label13.Location = new System.Drawing.Point(344, 191);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(38, 20);
+            this.label13.Size = new System.Drawing.Size(63, 20);
             this.label13.TabIndex = 53;
-            this.label13.Text = "Age";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(239, 191);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(97, 20);
-            this.label12.TabIndex = 52;
-            this.label12.Text = "Data of birth";
+            this.label13.Text = "Pm Milk";
             // 
             // label9
             // 
@@ -668,9 +620,9 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(927, 96);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 20);
+            this.label9.Size = new System.Drawing.Size(78, 20);
             this.label9.TabIndex = 51;
-            this.label9.Text = "Breed";
+            this.label9.Text = "Noon Milk";
             // 
             // label10
             // 
@@ -706,9 +658,9 @@
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(711, 96);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(43, 20);
+            this.label11.Size = new System.Drawing.Size(64, 20);
             this.label11.TabIndex = 48;
-            this.label11.Text = "color";
+            this.label11.Text = "Am Milk";
             // 
             // bunifuMaterialTextbox4
             // 
@@ -735,9 +687,9 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(455, 96);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 20);
+            this.label7.Size = new System.Drawing.Size(86, 20);
             this.label7.TabIndex = 46;
-            this.label7.Text = "Ear Tag";
+            this.label7.Text = "Cow Name";
             // 
             // label8
             // 
@@ -837,11 +789,30 @@
             this.button2.Text = "Edit";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(805, 219);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 29);
+            this.dateTimePicker1.TabIndex = 72;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(801, 183);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(48, 20);
+            this.label12.TabIndex = 71;
+            this.label12.Text = "Data ";
+            // 
             // Mailk_Producation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1109, 692);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label25);
@@ -851,14 +822,10 @@
             this.Controls.Add(this.guna2DataGridView1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.bunifuMaterialTextbox1);
-            this.Controls.Add(this.bunifuMaterialTextbox7);
-            this.Controls.Add(this.label15);
             this.Controls.Add(this.bunifuMaterialTextbox6);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.bunifuMaterialTextbox5);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.bunifuMaterialTextbox3);
@@ -959,14 +926,10 @@
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private System.Windows.Forms.Label label6;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox7;
-        private System.Windows.Forms.Label label15;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox6;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox5;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox3;
@@ -982,5 +945,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label12;
     }
 }
