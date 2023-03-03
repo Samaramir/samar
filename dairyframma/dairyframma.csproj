@@ -55,6 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cowHealth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cowHealth.Designer.cs">
+      <DependentUpon>cowHealth.cs</DependentUpon>
+    </Compile>
     <Compile Include="cows.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="cowHealth.resx">
+      <DependentUpon>cowHealth.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="cows.resx">
       <DependentUpon>cows.cs</DependentUpon>
     </EmbeddedResource>
