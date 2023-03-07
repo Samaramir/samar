@@ -239,6 +239,7 @@
             this.label19.Size = new System.Drawing.Size(57, 24);
             this.label19.TabIndex = 9;
             this.label19.Text = "Cows";
+            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // panel4
             // 
@@ -388,6 +389,7 @@
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(207, 50);
             this.panel12.TabIndex = 15;
+            this.panel12.Paint += new System.Windows.Forms.PaintEventHandler(this.panel12_Paint);
             // 
             // pictureBox9
             // 
@@ -594,6 +596,7 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(207, 50);
             this.panel11.TabIndex = 14;
+            this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
             // 
             // pictureBox8
             // 
@@ -614,6 +617,7 @@
             this.label21.Size = new System.Drawing.Size(91, 24);
             this.label21.TabIndex = 9;
             this.label21.Text = "Milk sales";
+            this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // panel10
             // 
@@ -624,6 +628,7 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(207, 50);
             this.panel10.TabIndex = 13;
+            this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.panel10_Paint);
             // 
             // pictureBox7
             // 
@@ -654,6 +659,7 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(207, 50);
             this.panel7.TabIndex = 12;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // pictureBox4
             // 
@@ -683,6 +689,7 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(210, 50);
             this.panel8.TabIndex = 11;
+            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
             // pictureBox5
             // 
