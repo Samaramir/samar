@@ -16,5 +16,10 @@ namespace dairyframma
         {
             InitializeComponent();
         }
+
+        private void login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
