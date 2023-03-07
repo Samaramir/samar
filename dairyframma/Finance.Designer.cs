@@ -170,6 +170,7 @@
             this.label19.Size = new System.Drawing.Size(57, 24);
             this.label19.TabIndex = 9;
             this.label19.Text = "Cows";
+            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // panel3
             // 
@@ -248,6 +249,7 @@
             this.label18.Size = new System.Drawing.Size(139, 24);
             this.label18.TabIndex = 9;
             this.label18.Text = "Milk Production";
+            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // panel4
             // 
@@ -326,6 +328,7 @@
             this.label23.Size = new System.Drawing.Size(107, 24);
             this.label23.TabIndex = 9;
             this.label23.Text = "Dash board";
+            this.label23.Click += new System.EventHandler(this.label23_Click);
             // 
             // panel13
             // 
@@ -418,6 +421,7 @@
             this.label21.Size = new System.Drawing.Size(91, 24);
             this.label21.TabIndex = 9;
             this.label21.Text = "Milk sales";
+            this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // panel10
             // 
@@ -449,6 +453,7 @@
             this.label20.Size = new System.Drawing.Size(87, 24);
             this.label20.TabIndex = 9;
             this.label20.Text = "Breeding";
+            this.label20.Click += new System.EventHandler(this.label20_Click);
             // 
             // panel7
             // 
@@ -480,6 +485,7 @@
             this.label17.Size = new System.Drawing.Size(73, 24);
             this.label17.TabIndex = 9;
             this.label17.Text = "Healthy";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // panel8
             // 
