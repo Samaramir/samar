@@ -94,5 +94,10 @@ namespace dairyframma
             ob.Show();
             this.Hide();
         }
+
+        private void bunifuMaterialTextbox4_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
