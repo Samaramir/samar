@@ -101,7 +101,7 @@ namespace dairyframma
         {
 
         }
-
+        int age = 0;
         private void button1_Click(object sender, EventArgs e)
         {
             if (CowNameTb.Text=="" || EarTagTb.Text=="" ||ColorTb.Text=="" ||BreedTb.Text==""||WidgetOfBirthTb.Text==""||AgeTb.Text==""||PasturTb.Text=="")
@@ -113,6 +113,10 @@ namespace dairyframma
                 try
                 {
                     Con.Open();
+                    String Query = "insert into CowTb1 Values('" + CowNameTb.Text + "', '" + EarTagTb.Text + "','" + ColorTb.Text + "','" + BreedTb.Text + "',"+age+" ,"+ WidgetOfBirthTb.Text+ ",'" + PasturTb.Text + "')";
+                    SqlCommand cmd = new SqlCommand(Query,Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Cow Saved Seccessfully");
                     Con.Close();
 
                 }catch(Exception Ex)
@@ -120,6 +124,18 @@ namespace dairyframma
                     MessageBox.Show(Ex.Message);
                 }
             }
+        }
+
+        private void DOFDate_ValueChanged(object sender, EventArgs e)
+        {
+            age = Convert.ToInt32((DOFDate.Value.Date - DateTime.Today.Date).Days) / 365;
+             
+        }
+
+        private void DOFDate_MouseLeave(object sender, EventArgs e)
+        {
+            age = Convert.ToInt32((DOFDate.Value.Date - DateTime.Today.Date).Days) / 365;
+            AgeTb.Text = "" + age;
         }
     }
 }

@@ -634,6 +634,7 @@
             // AgeTb
             // 
             this.AgeTb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.AgeTb.Enabled = false;
             this.AgeTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AgeTb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.AgeTb.HintForeColor = System.Drawing.Color.Empty;
@@ -656,6 +657,8 @@
             this.DOFDate.Name = "DOFDate";
             this.DOFDate.Size = new System.Drawing.Size(200, 26);
             this.DOFDate.TabIndex = 23;
+            this.DOFDate.ValueChanged += new System.EventHandler(this.DOFDate_ValueChanged);
+            this.DOFDate.MouseLeave += new System.EventHandler(this.DOFDate_MouseLeave);
             // 
             // WidgetOfBirthTb
             // 
