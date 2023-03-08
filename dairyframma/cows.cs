@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace dairyframma
 {
@@ -16,6 +17,7 @@ namespace dairyframma
         {
             InitializeComponent();
         }
+        SqlConnection COn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\samar\Documents\DairyFarmDb.mdf;Integrated Security=True;Connect Timeout=30");
 
         private void label21_Click(object sender, EventArgs e)
         {
@@ -98,6 +100,14 @@ namespace dairyframma
         private void bunifuMaterialTextbox4_OnValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (CowNameTb.Text=="" || EarTagTb.Text=="" ||ColorTb.Text=="" ||BreedTb.Text==""||WidgetOfBirthTb.Text==""||AgeTb.Text==""||PasturTb.Text=="")
+            {
+                MessageBox.Show("Missing Information");
+            }
         }
     }
 }
