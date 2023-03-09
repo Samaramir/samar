@@ -114,12 +114,13 @@ namespace dairyframma
                 var ds = new DataSet();
                 sda.Fill(ds);
                 CowsDGV.DataSource = ds.Tables[0];
+                
             }
             catch
             {
-
+                Con.Close();
             }
-             Con.Close();
+            
         }
         private void Clear()
         {
@@ -148,6 +149,7 @@ namespace dairyframma
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Cow Saved Seccessfully");
                     Populate();
+                    Clear();
                     Con.Close();
 
                 }catch(Exception Ex)
@@ -168,7 +170,7 @@ namespace dairyframma
             age = Convert.ToInt32((DOFDate.Value.Date - DateTime.Today.Date).Days) / 365;
             AgeTb.Text = "" + age;
         }
-
+        int Key = 0;
         private void CowsDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
              CowNameTb.Text = CowsDGV.SelectedRows[0].Cells[1].Value.ToString();
