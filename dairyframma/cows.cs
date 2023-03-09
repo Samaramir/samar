@@ -16,6 +16,7 @@ namespace dairyframma
         public cows()
         {
             InitializeComponent();
+            Populate();
         }
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\samar\Documents\DairyFarmDb.mdf;Integrated Security=True;Connect Timeout=30");
 
@@ -101,6 +102,34 @@ namespace dairyframma
         {
 
         }
+        private void Populate()
+        {
+            Con.Open();
+            string quary = "Select * From CowTb1";
+            SqlDataAdapter sda = new SqlDataAdapter(quary, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            try
+            {
+                var ds = new DataSet();
+                sda.Fill(ds);
+                CowsDGV.DataSource = ds.Tables[0];
+            }
+            catch
+            {
+
+            }
+             Con.Close();
+        }
+        private void Clear()
+        {
+            CowNameTb.Text = "";
+            EarTagTb.Text = "";
+            ColorTb.Text = "";
+            BreedTb.Text = "";
+            WidgetOfBirthTb.Text = "";
+            AgeTb.Text = "";
+            PasturTb.Text = "";
+        }
         int age = 0;
         private void button1_Click(object sender, EventArgs e)
         {
@@ -117,6 +146,7 @@ namespace dairyframma
                     SqlCommand cmd = new SqlCommand(Query,Con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Cow Saved Seccessfully");
+                    Populate();
                     Con.Close();
 
                 }catch(Exception Ex)
@@ -136,6 +166,16 @@ namespace dairyframma
         {
             age = Convert.ToInt32((DOFDate.Value.Date - DateTime.Today.Date).Days) / 365;
             AgeTb.Text = "" + age;
+        }
+
+        private void CowsDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Clear();
         }
     }
 }
