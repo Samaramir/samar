@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using static System.Windows.Forms.AxHost;
 
 namespace dairyframma
 {
@@ -170,6 +171,21 @@ namespace dairyframma
 
         private void CowsDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+             CowNameTb.Text = CowsDGV.SelectedRows[0].Cells[1].Value.ToString();
+            EarTagTb.Text = CowsDGV.SelectedRows[0].Cells[2].Value.ToString();
+            ColorTb.Text = CowsDGV.SelectedRows[0].Cells[3].Value.ToString();
+            BreedTb.Text =  CowsDGV.SelectedRows[0].Cells[4].Value.ToString();
+            WidgetOfBirthTb.Text = CowsDGV.SelectedRows[0].Cells[5].Value.ToString();
+            AgeTb.Text = CowsDGV.SelectedRows[0].Cells[6].Value.ToString();
+            PasturTb.Text = CowsDGV.SelectedRows[0].Cells[7].Value.ToString();
+            if (CowNameTb.Text == "")
+            {
+                Key = 0;
+            }
+            else
+            {
+                Key = Convert.ToInt32(CowsDGV.SelectedRows[0].Cells[0].Value.ToString());
+            }
 
         }
 
