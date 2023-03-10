@@ -128,14 +128,14 @@ namespace dairyframma
             EarTagTb.Text = "";
             ColorTb.Text = "";
             BreedTb.Text = "";
-            WidgetOfBirthTb.Text = "";
             AgeTb.Text = "";
+            WidgetOfBirthTb.Text = "";
             PasturTb.Text = "";
         }
         int age = 0;
         private void button1_Click(object sender, EventArgs e)
         {
-            if (CowNameTb.Text=="" || EarTagTb.Text=="" ||ColorTb.Text=="" ||BreedTb.Text==""||WidgetOfBirthTb.Text==""||AgeTb.Text==""||PasturTb.Text=="")
+            if (CowNameTb.Text=="" || EarTagTb.Text=="" ||ColorTb.Text=="" ||BreedTb.Text==""|| AgeTb.Text == ""|| WidgetOfBirthTb.Text == "" || PasturTb.Text=="")
             {
                 MessageBox.Show("Missing Information");
             }
@@ -177,16 +177,19 @@ namespace dairyframma
             EarTagTb.Text = CowsDGV.SelectedRows[0].Cells[2].Value.ToString();
             ColorTb.Text = CowsDGV.SelectedRows[0].Cells[3].Value.ToString();
             BreedTb.Text =  CowsDGV.SelectedRows[0].Cells[4].Value.ToString();
-            WidgetOfBirthTb.Text = CowsDGV.SelectedRows[0].Cells[5].Value.ToString();
-            AgeTb.Text = CowsDGV.SelectedRows[0].Cells[6].Value.ToString();
+           // AgeTb.Text = CowsDGV.SelectedRows[0].Cells[5].Value.ToString();
+            WidgetOfBirthTb.Text = CowsDGV.SelectedRows[0].Cells[6].Value.ToString();
+          
             PasturTb.Text = CowsDGV.SelectedRows[0].Cells[7].Value.ToString();
             if (CowNameTb.Text == "")
             {
                 Key = 0;
+                age = 0;
             }
             else
             {
                 Key = Convert.ToInt32(CowsDGV.SelectedRows[0].Cells[0].Value.ToString());
+                age = Convert.ToInt32(CowsDGV.SelectedRows[0].Cells[5].Value.ToString());
             }
 
         }
