@@ -198,5 +198,31 @@ namespace dairyframma
         {
             Clear();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if ( Key==0)
+            {
+                MessageBox.Show("Select The Cow To Be Deleted");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    String Query = "delete from CowTb1 where CowId="  + Key +";";
+                    SqlCommand cmd = new SqlCommand(Query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Cow Deleted Seccessfully");
+                    
+
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+
+        }
     }
 }
