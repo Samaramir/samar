@@ -214,7 +214,11 @@ namespace dairyframma
                     SqlCommand cmd = new SqlCommand(Query, Con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Cow Deleted Seccessfully");
-                    
+                    Populate();
+                    Clear();
+                    Con.Close();
+
+
 
                 }
                 catch (Exception Ex)
@@ -223,6 +227,33 @@ namespace dairyframma
                 }
             }
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (CowNameTb.Text == "" || EarTagTb.Text == "" || ColorTb.Text == "" || BreedTb.Text == "" || AgeTb.Text == "" || WidgetOfBirthTb.Text == "" || PasturTb.Text == "")
+            {
+                MessageBox.Show("Missing Information");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    String Query = " Update CowTb1 set CowName='" + CowNameTb.Text + "', EarTag= '" + EarTagTb.Text + "', Color='" + ColorTb.Text + "',Breed='" + BreedTb.Text + "', Age=" + age + " , WeightAtBirth=" + WidgetOfBirthTb.Text + ", Pasture='" + PasturTb.Text + "' where CowId=" + Key +";";
+                    SqlCommand cmd = new SqlCommand(Query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Cow Updated Seccessfully");
+                    Populate();
+                    Clear();
+                    Con.Close();
+
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
         }
     }
 }
