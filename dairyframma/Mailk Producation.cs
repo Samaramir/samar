@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,27 @@ namespace dairyframma
         public Mailk_Producation()
         {
             InitializeComponent();
+            FillCowId();
+        }
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\samar\Documents\DairyFarmDb.mdf;Integrated Security=True;Connect Timeout=30");
+        private void FillCowId()
+        {
+            Con.Open();
+            SqlCommand cmd = new SqlCommand("Select CowId form CowTb1",Con);
+            SqlDataReader Rdr;
+            try
+            {
+                Rdr = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("CowId", typeof(int));
+                dt.Load(Rdr);
+                CowIdcb.ValueMember = "CowId";
+                CowIdcb.DataSource = dt;
+            }
+            catch { 
+            }
+            
+            Con.Close();
         }
 
         private void label19_Click(object sender, EventArgs e)
@@ -57,6 +79,11 @@ namespace dairyframma
             DashBoard ob = new DashBoard();
             ob.Show();
             this.Hide();
+        }
+
+        private void bunifuMaterialTextbox6_OnValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -118,9 +118,10 @@ namespace dairyframma
             }
             catch
             {
-                Con.Close();
+               
             }
-            
+            Con.Close();
+
         }
         private void Clear()
         {
@@ -131,6 +132,7 @@ namespace dairyframma
             AgeTb.Text = "";
             WidgetOfBirthTb.Text = "";
             PasturTb.Text = "";
+            Key = 0;
         }
         int age = 0;
         private void button1_Click(object sender, EventArgs e)
@@ -148,9 +150,10 @@ namespace dairyframma
                     SqlCommand cmd = new SqlCommand(Query,Con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Cow Saved Seccessfully");
+                    Con.Close();
                     Populate();
                     Clear();
-                    Con.Close();
+                    
 
                 }catch(Exception Ex)
                 {
@@ -214,10 +217,10 @@ namespace dairyframma
                     SqlCommand cmd = new SqlCommand(Query, Con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Cow Deleted Seccessfully");
+                    Con.Close();
                     Populate();
                     Clear();
-                    Con.Close();
-
+                   
 
 
                 }
@@ -244,9 +247,10 @@ namespace dairyframma
                     SqlCommand cmd = new SqlCommand(Query, Con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Cow Updated Seccessfully");
+                    Con.Close();
                     Populate();
                     Clear();
-                    Con.Close();
+                    
 
                 }
                 catch (Exception Ex)
