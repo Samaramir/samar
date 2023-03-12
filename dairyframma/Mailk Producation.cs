@@ -39,6 +39,26 @@ namespace dairyframma
 
             Con.Close();
         }
+        private void Populate()
+        {
+            Con.Open();
+            string quary = "Select * From MilkTb";
+            SqlDataAdapter sda = new SqlDataAdapter(quary, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            try
+            {
+                var ds = new DataSet();
+                sda.Fill(ds);
+                MilkDGV.DataSource = ds.Tables[0];
+
+            }
+            catch
+            {
+
+            }
+            Con.Close();
+
+        }
 
         private void label19_Click(object sender, EventArgs e)
         {
@@ -125,5 +145,9 @@ namespace dairyframma
             }
         }
 
+        private void MilkDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
