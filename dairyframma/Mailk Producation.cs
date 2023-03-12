@@ -22,7 +22,7 @@ namespace dairyframma
         private void FillCowId()
         {
             Con.Open();
-            SqlCommand cmd = new SqlCommand("Select CowId form CowTb1",Con);
+            SqlCommand cmd = new SqlCommand("Select CowId form CowTb1", Con);
             SqlDataReader Rdr;
             try
             {
@@ -33,9 +33,10 @@ namespace dairyframma
                 CowIdcb.ValueMember = "CowId";
                 CowIdcb.DataSource = dt;
             }
-            catch { 
+            catch
+            {
             }
-            
+
             Con.Close();
         }
 
@@ -62,14 +63,14 @@ namespace dairyframma
 
         private void label21_Click(object sender, EventArgs e)
         {
-             MilkSales ob = new MilkSales();
+            MilkSales ob = new MilkSales();
             ob.Show();
             this.Hide();
         }
 
         private void label22_Click(object sender, EventArgs e)
         {
-             Finance ob = new  Finance();
+            Finance ob = new Finance();
             ob.Show();
             this.Hide();
         }
@@ -85,5 +86,34 @@ namespace dairyframma
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (CowIdcb.SelectedIndex == -1 ||  CowNameTb.Text == "" || AmMilkTb.Text == "" || NoonMilkTb.Text == "" || PmMilkTb.Text == "" || TotalMilkTb.Text == "" )
+            {
+                MessageBox.Show("Missing Information");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    String Query = "insert into MilkTb Values(" + CowIdcb.SelectedValue.ToString() + ", '" +CowNameTb.Text  + "'," + AmMilkTb.Text + "," + NoonMilkTb.Text + "," + PmMilkTb.Text + " ," + TotalMilkTb.Text + ",'"+Date.Value.Date+"')";
+                    SqlCommand cmd = new SqlCommand(Query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Milk Saved Seccessfully");
+                    Con.Close();
+                    //Populate();
+                    //Clear();
+
+
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+        }
+
     }
 }
