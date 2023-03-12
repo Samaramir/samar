@@ -114,7 +114,7 @@ namespace dairyframma
                     MessageBox.Show("Milk Saved Seccessfully");
                     Con.Close();
                     //Populate();
-                    //Clear();
+                    Clear();
 
 
                 }
