@@ -86,7 +86,17 @@ namespace dairyframma
         {
 
         }
-
+        private void Clear()
+        {
+            CowIdcb.SelectedIndex= -1;
+            CowNameTb.Text = "";
+            AmMilkTb.Text = "";
+            NoonMilkTb.Text = "";
+            PmMilkTb.Text = "";
+            TotalMilkTb.Text = "";
+            Date.Text = "";
+           // Key = 0;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             if (CowIdcb.SelectedIndex == -1 ||  CowNameTb.Text == "" || AmMilkTb.Text == "" || NoonMilkTb.Text == "" || PmMilkTb.Text == "" || TotalMilkTb.Text == "" )
