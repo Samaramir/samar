@@ -60,6 +60,21 @@ namespace dairyframma
             Con.Close();
 
         }
+        private void GetCowName()
+        {
+            Con.Open();
+            String query = "select *from CowTb1 Where CowId" +CowIdcb.SelectedValue.ToString()+"";
+            SqlCommand cmd = new SqlCommand(query, Con);
+            DataTable dt = new DataTable();
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            sda.Fill(dt);
+            foreach(DataRow dr in dt.Rows)
+            {
+                CowNameTb.Text = dr["CowName"].ToString();
+            }
+
+            Con.Close();
+        }
 
         private void label19_Click(object sender, EventArgs e)
         {
@@ -147,6 +162,16 @@ namespace dairyframma
         }
 
         private void MilkDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void CowIdcb_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            GetCowName();
+        }
+
+        private void CowNameTb_OnValueChanged(object sender, EventArgs e)
         {
 
         }
