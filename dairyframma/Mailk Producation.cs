@@ -17,6 +17,7 @@ namespace dairyframma
         {
             InitializeComponent();
             FillCowId();
+            Populate();
         }
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\samar\Documents\DairyFarmDb.mdf;Integrated Security=True;Connect Timeout=30");
         private void FillCowId()
@@ -133,7 +134,7 @@ namespace dairyframma
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Milk Saved Seccessfully");
                     Con.Close();
-                    //Populate();
+                    Populate();
                     Clear();
 
 
