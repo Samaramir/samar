@@ -60,21 +60,7 @@ namespace dairyframma
             Con.Close();
 
         }
-        private void GetCowName()
-        {
-            Con.Open();
-            String query = "select *from CowTb1 Where CowId" +CowIdcb.SelectedValue.ToString()+"";
-            SqlCommand cmd = new SqlCommand(query, Con);
-            DataTable dt = new DataTable();
-            SqlDataAdapter sda = new SqlDataAdapter(cmd);
-            sda.Fill(dt);
-            foreach(DataRow dr in dt.Rows)
-            {
-                CowNameTb.Text = dr["CowName"].ToString();
-            }
-
-            Con.Close();
-        }
+       
 
         private void label19_Click(object sender, EventArgs e)
         {
@@ -120,12 +106,13 @@ namespace dairyframma
 
         private void bunifuMaterialTextbox6_OnValueChanged(object sender, EventArgs e)
         {
-
+            int total = Convert.ToInt32(AmMilkTb.Text) + Convert.ToInt32(PmMilkTb.Text) + Convert.ToInt32(NoonMilkTb.Text);
+            TotalMilkTb.Text = "" + total;
         }
         private void Clear()
         {
             CowIdcb.SelectedIndex= -1;
-            CowNameTb.Text = "";
+            CowNaTb.Text = "";
             AmMilkTb.Text = "";
             NoonMilkTb.Text = "";
             PmMilkTb.Text = "";
@@ -133,9 +120,26 @@ namespace dairyframma
             Date.Text = "";
            // Key = 0;
         }
+
+        private void GetCowName()
+        {
+            Con.Open();
+            String query = "select * from CowTb1 Where CowId" + CowIdcb.SelectedValue.ToString() + "";
+            SqlCommand cmd = new SqlCommand(query, Con);
+            DataTable dt = new DataTable();
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            sda.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            
+                CowNaTb.Text = dr["CowName"].ToString();
+            
+
+            Con.Close();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            if (CowIdcb.SelectedIndex == -1 ||  CowNameTb.Text == "" || AmMilkTb.Text == "" || NoonMilkTb.Text == "" || PmMilkTb.Text == "" || TotalMilkTb.Text == "" )
+            if (CowIdcb.SelectedIndex == -1 ||  CowNaTb.Text == "" || AmMilkTb.Text == "" || NoonMilkTb.Text == "" || PmMilkTb.Text == "" || TotalMilkTb.Text == "" )
             {
                 MessageBox.Show("Missing Information");
             }
@@ -144,7 +148,7 @@ namespace dairyframma
                 try
                 {
                     Con.Open();
-                    String Query = "insert into MilkTb Values(" + CowIdcb.SelectedValue.ToString() + ", '" +CowNameTb.Text  + "'," + AmMilkTb.Text + "," + NoonMilkTb.Text + "," + PmMilkTb.Text + " ," + TotalMilkTb.Text + ",'"+Date.Value.Date+"')";
+                    String Query = "insert into MilkTb Values(" + CowIdcb.SelectedValue.ToString() + ", '" +CowNaTb.Text  + "'," + AmMilkTb.Text + "," + NoonMilkTb.Text + "," + PmMilkTb.Text + " ," + TotalMilkTb.Text + ",'"+Date.Value.Date+"')";
                     SqlCommand cmd = new SqlCommand(Query, Con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Milk Saved Seccessfully");
@@ -174,6 +178,22 @@ namespace dairyframma
         private void CowNameTb_OnValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void CowIdcb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void PmMilkTb_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PmMilkTb_MouseUp(object sender, MouseEventArgs e)
+        {
+           
         }
     }
 }

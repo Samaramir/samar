@@ -81,7 +81,7 @@
             this.AmMilkTb = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.CowNameTb = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.CowNaTb = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -593,6 +593,8 @@
             this.PmMilkTb.Size = new System.Drawing.Size(177, 28);
             this.PmMilkTb.TabIndex = 54;
             this.PmMilkTb.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.PmMilkTb.OnValueChanged += new System.EventHandler(this.PmMilkTb_OnValueChanged);
+            this.PmMilkTb.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PmMilkTb_MouseUp);
             // 
             // label13
             // 
@@ -690,26 +692,26 @@
             this.label8.Size = new System.Drawing.Size(0, 25);
             this.label8.TabIndex = 45;
             // 
-            // CowNameTb
+            // CowNaTb
             // 
-            this.CowNameTb.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.CowNameTb.Enabled = false;
-            this.CowNameTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CowNameTb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.CowNameTb.HintForeColor = System.Drawing.Color.Empty;
-            this.CowNameTb.HintText = "";
-            this.CowNameTb.isPassword = false;
-            this.CowNameTb.LineFocusedColor = System.Drawing.Color.MidnightBlue;
-            this.CowNameTb.LineIdleColor = System.Drawing.Color.Gray;
-            this.CowNameTb.LineMouseHoverColor = System.Drawing.Color.MidnightBlue;
-            this.CowNameTb.LineThickness = 4;
-            this.CowNameTb.Location = new System.Drawing.Point(448, 126);
-            this.CowNameTb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.CowNameTb.Name = "CowNameTb";
-            this.CowNameTb.Size = new System.Drawing.Size(177, 28);
-            this.CowNameTb.TabIndex = 44;
-            this.CowNameTb.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.CowNameTb.OnValueChanged += new System.EventHandler(this.CowNameTb_OnValueChanged);
+            this.CowNaTb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.CowNaTb.Enabled = false;
+            this.CowNaTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CowNaTb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.CowNaTb.HintForeColor = System.Drawing.Color.Empty;
+            this.CowNaTb.HintText = "";
+            this.CowNaTb.isPassword = false;
+            this.CowNaTb.LineFocusedColor = System.Drawing.Color.MidnightBlue;
+            this.CowNaTb.LineIdleColor = System.Drawing.Color.Gray;
+            this.CowNaTb.LineMouseHoverColor = System.Drawing.Color.MidnightBlue;
+            this.CowNaTb.LineThickness = 4;
+            this.CowNaTb.Location = new System.Drawing.Point(448, 126);
+            this.CowNaTb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CowNaTb.Name = "CowNaTb";
+            this.CowNaTb.Size = new System.Drawing.Size(177, 28);
+            this.CowNaTb.TabIndex = 44;
+            this.CowNaTb.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.CowNaTb.OnValueChanged += new System.EventHandler(this.CowNameTb_OnValueChanged);
             // 
             // label2
             // 
@@ -805,6 +807,7 @@
             this.CowIdcb.Name = "CowIdcb";
             this.CowIdcb.Size = new System.Drawing.Size(163, 32);
             this.CowIdcb.TabIndex = 73;
+            this.CowIdcb.SelectedIndexChanged += new System.EventHandler(this.CowIdcb_SelectedIndexChanged);
             this.CowIdcb.SelectionChangeCommitted += new System.EventHandler(this.CowIdcb_SelectionChangeCommitted);
             // 
             // Mailk_Producation
@@ -834,7 +837,7 @@
             this.Controls.Add(this.AmMilkTb);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.CowNameTb);
+            this.Controls.Add(this.CowNaTb);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -937,7 +940,7 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox AmMilkTb;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox CowNameTb;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox CowNaTb;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
