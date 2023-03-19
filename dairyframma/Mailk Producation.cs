@@ -118,7 +118,8 @@ namespace dairyframma
             PmMilkTb.Text = "";
             TotalMilkTb.Text = "";
             Date.Text = "";
-        
+            Key = 0;
+
         }
 
         private void GetCowName()
@@ -246,6 +247,34 @@ namespace dairyframma
                 }
             }
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (CowIdcb.SelectedIndex == -1 || CowNaTb.Text == "" || AmMilkTb.Text == "" || NoonMilkTb.Text == "" || PmMilkTb.Text == "" || TotalMilkTb.Text == "")
+                {
+                MessageBox.Show("Missing Information");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    String Query = " Update MilkTb1 set CowName='" + CowNaTb.Text + "', AmMilk= " + AmMilkTb.Text + ", NoonMilk= " + NoonMilkTb.Text + ",PmMilk=" + PmMilkTb.Text + ", TotalMilk=" + TotalMilkTb + " ,  DateProd= '" + Date.Value.Date +  "' where MId=" + Key + ";";
+                    SqlCommand cmd = new SqlCommand(Query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Product Updated Seccessfully");
+                    Con.Close();
+                    Populate();
+                    Clear();
+
+
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
         }
     }
 }
