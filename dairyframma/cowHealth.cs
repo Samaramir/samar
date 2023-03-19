@@ -75,6 +75,15 @@ namespace dairyframma
 
             Con.Close();
         }
+        private void clear()
+        {
+            CowNameTb.Text = "";
+            EventTb.Text = "";
+            CostTb.Text = "";
+            DiagnosisTb.Text = "";
+            VetNameTb.Text = "";
+            TreatmentTb.Text="";
+        }
 
         private void cowHealth_Load(object sender, EventArgs e)
         {
@@ -171,6 +180,40 @@ namespace dairyframma
         private void CowIdCb_SelectionChangeCommitted(object sender, EventArgs e)
         {
             GetCowName();
+        }
+       
+
+        private void Savebt_Click(object sender, EventArgs e)
+        {
+            if (CowIdCb.SelectedIndex == -1 || CowNameTb.Text == "" || EventTb.Text == "" || CostTb.Text == "" || VetNameTb.Text == "" || DiagnosisTb.Text == ""||TreatmentTb.Text=="")
+            {
+                MessageBox.Show("Missing Information");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    String Query = "insert into HealthTb1 Values(" + CowIdCb.SelectedValue.ToString() + ", '" + CowNameTb.Text + "','" + Date.Value.Date + "','" + EventTb.Text + "','" + DiagnosisTb.Text + "' ,'" + TreatmentTb.Text + "','" + CostTb.Text + "','" + VetNameTb.Text + "')";
+                    SqlCommand cmd = new SqlCommand(Query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Healthy Issue Saved");
+                    Con.Close();
+                    Populate();
+                    clear();
+
+
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
