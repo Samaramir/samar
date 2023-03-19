@@ -272,5 +272,33 @@ namespace dairyframma
             }
 
         }
+
+        private void Editbt_Click(object sender, EventArgs e)
+        {
+            if (CowIdCb.SelectedIndex == -1 || CowNameTb.Text == "" || EventTb.Text == "" || CostTb.Text == "" || VetNameTb.Text == "" || DiagnosisTb.Text == "" || TreatmentTb.Text == "")
+            {
+                MessageBox.Show("Missing Information");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    String Query = " Update HealthTb1 set CowId ="+ CowIdCb.SelectedValue.ToString()+", CowName='" + CowNameTb.Text + "', RepDate=' " + Date.Value.Date+ "', Event=' " +EventTb .Text + "',Diagnosis='" +DiagnosisTb.Text + "', Treatment='" +TreatmentTb.Text + "' , Cost= " +CostTb.Text + ", VetName= '" +VetNameTb.Text + "' where RepId=" + key + ";";
+                    SqlCommand cmd = new SqlCommand(Query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Product Updated Seccessfully");
+                    Con.Close();
+                    Populate();
+                    clear();
+
+
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+        }
     }
 }
