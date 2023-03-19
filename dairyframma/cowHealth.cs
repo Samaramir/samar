@@ -83,6 +83,7 @@ namespace dairyframma
             DiagnosisTb.Text = "";
             VetNameTb.Text = "";
             TreatmentTb.Text="";
+            key = 0;
         }
 
         private void cowHealth_Load(object sender, EventArgs e)
@@ -213,6 +214,62 @@ namespace dairyframma
 
         private void label12_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void Clear_Click(object sender, EventArgs e)
+        {
+            clear();
+        }
+        int key = 0;
+        private void HealthyDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            CowIdCb.SelectedValue = HealthyDGV.SelectedRows[0].Cells[1].Value.ToString();
+            CowNameTb.Text = HealthyDGV.SelectedRows[0].Cells[2].Value.ToString();
+            Date.Text = HealthyDGV.SelectedRows[0].Cells[3].Value.ToString();
+             EventTb.Text = HealthyDGV.SelectedRows[0].Cells[4].Value.ToString();
+            DiagnosisTb.Text = HealthyDGV.SelectedRows[0].Cells[5].Value.ToString();
+            TreatmentTb.Text = HealthyDGV.SelectedRows[0].Cells[6].Value.ToString();
+            CostTb.Text = HealthyDGV.SelectedRows[0].Cells[7].Value.ToString();
+            VetNameTb.Text = HealthyDGV.SelectedRows[0].Cells[7].Value.ToString();
+
+            if (CowNameTb.Text == "")
+            {
+                key = 0;
+            }
+            else
+            {
+                key = Convert.ToInt32(HealthyDGV.SelectedRows[0].Cells[0].Value.ToString());
+            }
+        }
+
+        private void Deletebt_Click(object sender, EventArgs e)
+        {
+            if (key == 0)
+            {
+                MessageBox.Show("Select The Repot To Be Deleted");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    String Query = "delete from HealthTb1 where RepId=" + key + ";";
+                    SqlCommand cmd = new SqlCommand(Query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Repoted Deleted Seccessfully");
+                    Con.Close();
+                    Populate();
+                    clear();
+
+
+
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
 
         }
     }
