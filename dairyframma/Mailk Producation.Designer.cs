@@ -462,8 +462,9 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(127, 38);
             this.button4.TabIndex = 67;
-            this.button4.Text = "Update";
+            this.button4.Text = "Clear";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -473,6 +474,7 @@
             this.button3.TabIndex = 66;
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 

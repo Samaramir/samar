@@ -118,7 +118,7 @@ namespace dairyframma
             PmMilkTb.Text = "";
             TotalMilkTb.Text = "";
             Date.Text = "";
-           // Key = 0;
+        
         }
 
         private void GetCowName()
@@ -164,9 +164,25 @@ namespace dairyframma
                 }
             }
         }
-
+        int Key = 0;
         private void MilkDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+           CowIdcb.SelectedValue = MilkDGV.SelectedRows[0].Cells[1].Value.ToString();
+            CowNaTb.Text = MilkDGV.SelectedRows[0].Cells[2].Value.ToString();
+            AmMilkTb.Text = MilkDGV.SelectedRows[0].Cells[3].Value.ToString();
+            NoonMilkTb.Text = MilkDGV.SelectedRows[0].Cells[4].Value.ToString();
+            PmMilkTb.Text = MilkDGV.SelectedRows[0].Cells[5].Value.ToString();
+            TotalMilkTb.Text = MilkDGV.SelectedRows[0].Cells[6].Value.ToString();
+            Date.Text = MilkDGV.SelectedRows[0].Cells[7].Value.ToString();
+
+            if (CowNaTb.Text == "")
+            {
+                Key = 0;
+            }
+            else
+            {
+                Key = Convert.ToInt32(MilkDGV.SelectedRows[0].Cells[0].Value.ToString());
+            }
 
         }
 
@@ -194,6 +210,42 @@ namespace dairyframma
         private void PmMilkTb_MouseUp(object sender, MouseEventArgs e)
         {
            
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Clear();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            if (Key == 0)
+            {
+                MessageBox.Show("Select The Milk product To Be Deleted");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    String Query = "delete from MilkTb1 where MId=" + Key + ";";
+                    SqlCommand cmd = new SqlCommand(Query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Product Deleted Seccessfully");
+                    Con.Close();
+                    Populate();
+                    Clear();
+
+
+
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+
         }
     }
 }
