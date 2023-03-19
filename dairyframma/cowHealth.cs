@@ -296,7 +296,7 @@ namespace dairyframma
                 }
                 catch (Exception Ex)
                 {
-                    
+                    MessageBox.Show(Ex.Message);
                 }
             }
         }
