@@ -23,7 +23,7 @@ namespace dairyframma
         private void FillCowId()
         {
             Con.Open();
-            SqlCommand cmd = new SqlCommand("Select CowId form CowTb1", Con);
+            SqlCommand cmd = new SqlCommand("Select CowId from CowTb1", Con);
             SqlDataReader Rdr;
             try
             {
