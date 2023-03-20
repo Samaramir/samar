@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.Design;
 
 namespace dairyframma
 {
@@ -47,7 +48,31 @@ namespace dairyframma
 
         private void Savebt_Click(object sender, EventArgs e)
         {
+            if (EmpName.Text== "" ||GenCb.SelectedIndex == -1 ||PhoneTb.Text == "" ||AddressTb.Text == "" )
+            {
+                MessageBox.Show("Missing Information");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    String Query = "insert into EmployeeTb1 Values('" + EmpName.Text + "', '" + DOB.Value.Date+ "','" +GenCb.SelectedItem.ToString()+ "','" + PhoneTb.Text + "','" + AddressTb.Text + "' )";
+                    SqlCommand cmd = new SqlCommand(Query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Employee Saved Successfully");
+                    Con.Close();
+                    Populate();
+                    clear();
 
+
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
         }
+    }
     }
 }
