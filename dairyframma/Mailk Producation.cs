@@ -23,19 +23,21 @@ namespace dairyframma
         private void FillCowId()
         {
             Con.Open();
-            SqlCommand cmd = new SqlCommand("Select CowId form CowTb1", Con);
+            SqlCommand cmd = new SqlCommand("Select CowId From CowTb1", Con);
             SqlDataReader Rdr;
-            try
-            {
+            
+            try {
                 Rdr = cmd.ExecuteReader();
+               
                 DataTable dt = new DataTable();
                 dt.Columns.Add("CowId", typeof(int));
                 dt.Load(Rdr);
                 CowIdcb.ValueMember = "CowId";
                 CowIdcb.DataSource = dt;
             }
-            catch
-            {
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+
             }
 
             Con.Close();

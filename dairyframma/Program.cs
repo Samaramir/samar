@@ -16,7 +16,7 @@ namespace dairyframma
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new cowHealth());
+            Application.Run(new Employees());
         }
     }
 }

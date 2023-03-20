@@ -20,3 +20,4 @@ C:\Users\samar\source\repos\dairyframma\dairyframma\obj\Debug\dairyframma.MilkSa
 C:\Users\samar\source\repos\dairyframma\dairyframma\obj\Debug\dairyframma.Breeding.resources
 C:\Users\samar\source\repos\dairyframma\dairyframma\obj\Debug\dairyframma.Finance.resources
 C:\Users\samar\source\repos\dairyframma\dairyframma\obj\Debug\dairyframma.DashBoard.resources
+C:\Users\samar\source\repos\dairyframma\dairyframma\obj\Debug\dairyframma.Employees.resources
