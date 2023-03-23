@@ -45,7 +45,14 @@ namespace dairyframma
         {
 
         }
-
+        private void clear()
+        {
+            PhoneTb.Text = "";
+            EmpName.Text = "";
+            AddressTb.Text = "";
+            GenCb.SelectedIndex = -1;
+            Key = 0;
+        }
         private void Savebt_Click(object sender, EventArgs e)
         {
             if (EmpName.Text== "" ||GenCb.SelectedIndex == -1 ||PhoneTb.Text == "" ||AddressTb.Text == "" )
@@ -73,6 +80,54 @@ namespace dairyframma
                 }
             }
         }
+
+        private void Editbt_Click(object sender, EventArgs e)
+        {
+            if (EmpName.Text == "" || GenCb.SelectedIndex == -1 || PhoneTb.Text == "" || AddressTb.Text == "")
+            {
+                MessageBox.Show("Missing Information");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    String Query = " Update HealthTb1 set EmpId =" + CowIdCb.SelectedValue.ToString() + ", CowName='" + CowNameTb.Text + "', RepDate=' " + Date.Value.Date + "', Event=' " + EventTb.Text + "',Diagnosis='" + DiagnosisTb.Text + "', Treatment='" + TreatmentTb.Text + "' , Cost= " + CostTb.Text + ", VetName= '" + VetNameTb.Text + "' where RepId=" + key + ";";
+                    SqlCommand cmd = new SqlCommand(Query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Product Updated Seccessfully");
+                    Con.Close();
+                    Populate();
+                    clear();
+
+
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+        }
+        int Key = 0;
+        private void EmployeeDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            EmpName.Text=EmployeeDGV.SelectedRows[0].Cells[1].Value.ToString();
+            DOB.Text = EmployeeDGV.SelectedRows[0].Cells[2].Value.ToString();
+            GenCb.SelectedItem = EmployeeDGV.SelectedRows[0].Cells[3].Value.ToString();
+            PhoneTb.Text = EmployeeDGV.SelectedRows[0].Cells[4].Value.ToString();
+            AddressTb.Text = EmployeeDGV.SelectedRows[0].Cells[5].Value.ToString();
+          
+
+            if (EmpName.Text == "")
+            {
+                Key = 0;
+            }
+            else
+            {
+                Key = Convert.ToInt32(EmployeeDGV.SelectedRows[0].Cells[0].Value.ToString());
+            }
+        }
     }
     }
-}
+    
+
