@@ -127,6 +127,11 @@ namespace dairyframma
                 Key = Convert.ToInt32(EmployeeDGV.SelectedRows[0].Cells[0].Value.ToString());
             }
         }
+
+        private void Clear_Click(object sender, EventArgs e)
+        {
+            clear();
+        }
     }
     }
     
