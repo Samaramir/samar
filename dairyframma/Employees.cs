@@ -93,13 +93,7 @@ namespace dairyframma
                 {
                     Con.Open();
                     String Query = " Update EmployeeTb1 set EmpName =" + EmpName.Text + ",  EmpDob='" +DOB.Value.Date + "', Gender=' " + GenCb.SelectedItem.ToString() + "',  Phone=' " + PhoneTb.Text + "',Address='" + AddressTb.Text + "' where EmpId=" + Key + ";";
-                    SqlCommand cmd = new SqlCommand(Query, Con);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Product Updated Seccessfully");
-                    Con.Close();
-                    Populate();
-                    clear();
-
+                   
 
                 }
                 catch (Exception Ex)
