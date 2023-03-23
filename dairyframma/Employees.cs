@@ -132,6 +132,36 @@ namespace dairyframma
         {
             clear();
         }
+
+        private void Deletebt_Click(object sender, EventArgs e)
+        {
+            if (Key == 0)
+            {
+                MessageBox.Show("Select The Employee To Be Deleted");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    String Query = "delete from EmployeeTb1 where EmpId=" + Key + ";";
+                    SqlCommand cmd = new SqlCommand(Query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Employee Deleted Seccessfully");
+                    Con.Close();
+                    Populate();
+                    clear();
+
+
+
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+
+        }
     }
     }
     
