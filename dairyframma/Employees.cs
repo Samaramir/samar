@@ -92,7 +92,7 @@ namespace dairyframma
                 try
                 {
                     Con.Open();
-                    String Query = " Update HealthTb1 set EmpId =" + CowIdCb.SelectedValue.ToString() + ", CowName='" + CowNameTb.Text + "', RepDate=' " + Date.Value.Date + "', Event=' " + EventTb.Text + "',Diagnosis='" + DiagnosisTb.Text + "', Treatment='" + TreatmentTb.Text + "' , Cost= " + CostTb.Text + ", VetName= '" + VetNameTb.Text + "' where RepId=" + key + ";";
+                    String Query = " Update EmployeeTb1 set EmpName =" + EmpName.Text + ",  EmpDob='" +DOB.Value.Date + "', Gender=' " + GenCb.SelectedItem.ToString() + "',  Phone=' " + PhoneTb.Text + "',Address='" + AddressTb.Text + "' where EmpId=" + Key + ";";
                     SqlCommand cmd = new SqlCommand(Query, Con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Product Updated Seccessfully");
