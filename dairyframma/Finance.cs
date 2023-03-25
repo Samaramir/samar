@@ -150,5 +150,43 @@ namespace dairyframma
                 }
             }
         }
+
+        private void bunifuMaterialTextbox1_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void clearInc()
+        {
+            IncPurcb.SelectedIndex = -1;
+            IncAmount.Text = "";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (Purpcb.SelectedIndex == -1 || ExAmountTb.Text == "")
+            {
+                MessageBox.Show("Missing Information");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    String Query = "insert into ExpenditureTb1 Values('" + ExpDate.Value.Date + "', '" + Purpcb.SelectedItem.ToString() + "'," + ExAmountTb.Text + "," + EmpIdleb.Text + ")";
+                    SqlCommand cmd = new SqlCommand(Query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Expenditure Saved Seccessfully");
+                    Con.Close();
+                    PopulateExp();
+                    clearExp();
+
+
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+        }
     }
 }

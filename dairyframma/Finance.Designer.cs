@@ -91,14 +91,14 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.IncDGV = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.IncDate = new System.Windows.Forms.DateTimePicker();
             this.label14 = new System.Windows.Forms.Label();
             this.IncPurcb = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.IncAmount = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label27 = new System.Windows.Forms.Label();
             this.EmpIdleb = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -722,14 +722,14 @@
             this.panel15.Controls.Add(this.label28);
             this.panel15.Controls.Add(this.label13);
             this.panel15.Controls.Add(this.IncDGV);
-            this.panel15.Controls.Add(this.dateTimePicker2);
+            this.panel15.Controls.Add(this.IncDate);
             this.panel15.Controls.Add(this.label14);
             this.panel15.Controls.Add(this.IncPurcb);
             this.panel15.Controls.Add(this.button2);
             this.panel15.Controls.Add(this.label15);
             this.panel15.Controls.Add(this.label16);
             this.panel15.Controls.Add(this.label26);
-            this.panel15.Controls.Add(this.bunifuMaterialTextbox1);
+            this.panel15.Controls.Add(this.IncAmount);
             this.panel15.Controls.Add(this.label27);
             this.panel15.Location = new System.Drawing.Point(301, 374);
             this.panel15.Name = "panel15";
@@ -813,12 +813,12 @@
             this.IncDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.IncDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // dateTimePicker2
+            // IncDate
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(18, 69);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(177, 26);
-            this.dateTimePicker2.TabIndex = 158;
+            this.IncDate.Location = new System.Drawing.Point(18, 69);
+            this.IncDate.Name = "IncDate";
+            this.IncDate.Size = new System.Drawing.Size(177, 26);
+            this.IncDate.TabIndex = 158;
             // 
             // label14
             // 
@@ -847,6 +847,7 @@
             this.button2.TabIndex = 144;
             this.button2.Text = "Save";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label15
             // 
@@ -877,24 +878,25 @@
             this.label26.Size = new System.Drawing.Size(0, 25);
             this.label26.TabIndex = 151;
             // 
-            // bunifuMaterialTextbox1
+            // IncAmount
             // 
-            this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox1.HintText = "";
-            this.bunifuMaterialTextbox1.isPassword = false;
-            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuMaterialTextbox1.LineThickness = 4;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(18, 191);
-            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(177, 28);
-            this.bunifuMaterialTextbox1.TabIndex = 150;
-            this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.IncAmount.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.IncAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IncAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.IncAmount.HintForeColor = System.Drawing.Color.Empty;
+            this.IncAmount.HintText = "";
+            this.IncAmount.isPassword = false;
+            this.IncAmount.LineFocusedColor = System.Drawing.Color.MidnightBlue;
+            this.IncAmount.LineIdleColor = System.Drawing.Color.Gray;
+            this.IncAmount.LineMouseHoverColor = System.Drawing.Color.MidnightBlue;
+            this.IncAmount.LineThickness = 4;
+            this.IncAmount.Location = new System.Drawing.Point(18, 191);
+            this.IncAmount.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.IncAmount.Name = "IncAmount";
+            this.IncAmount.Size = new System.Drawing.Size(177, 28);
+            this.IncAmount.TabIndex = 150;
+            this.IncAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.IncAmount.OnValueChanged += new System.EventHandler(this.bunifuMaterialTextbox1_OnValueChanged);
             // 
             // label27
             // 
@@ -1041,14 +1043,14 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label13;
         private Guna.UI2.WinForms.Guna2DataGridView IncDGV;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker IncDate;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox IncPurcb;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label26;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox IncAmount;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label EmpIdleb;
     }
