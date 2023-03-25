@@ -16,11 +16,11 @@ namespace dairyframma
         public Finance()
         {
             InitializeComponent();
-            Populate();
+            PopulateExp();
         }
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\samar\Documents\DairyFarmDb.mdf;Integrated Security=True;Connect Timeout=30");
        
-        private void Populate()
+        private void PopulateExp()
         {
             Con.Open();
             string quary = "Select * From ExpenditureTb1";
@@ -118,6 +118,10 @@ namespace dairyframma
             ob.Show();
             this.Hide();
         }
+        private void clearExp()
+        {
+
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -136,7 +140,7 @@ namespace dairyframma
                     MessageBox.Show("Milk Saved Seccessfully");
                     Con.Close();
                     Populate();
-                    Clear();
+                    clearExp();
 
 
                 }
