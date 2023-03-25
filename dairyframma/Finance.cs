@@ -17,6 +17,7 @@ namespace dairyframma
         {
             InitializeComponent();
             PopulateExp();
+            PopulateInc();
         }
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\samar\Documents\DairyFarmDb.mdf;Integrated Security=True;Connect Timeout=30");
        
@@ -140,6 +141,9 @@ namespace dairyframma
         }
         private void clearExp()
         {
+            Purpcb.SelectedIndex = -1;
+            ExAmountTb.Text = "";
+
 
         }
 
@@ -183,7 +187,7 @@ namespace dairyframma
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (Purpcb.SelectedIndex == -1 || ExAmountTb.Text == "")
+            if (IncPurcb.SelectedIndex == -1 || IncAmount.Text == "")
             {
                 MessageBox.Show("Missing Information");
             }
@@ -192,13 +196,13 @@ namespace dairyframma
                 try
                 {
                     Con.Open();
-                    String Query = "insert into IncomeTb1 Values('" + ExpDate.Value.Date + "', '" + Purpcb.SelectedItem.ToString() + "'," + ExAmountTb.Text + "," + EmpIdleb.Text + ")";
+                    String Query = "insert into IncomeTb1 Values('" + IncDate.Value.Date + "', '" +IncPurcb.SelectedItem.ToString() + "'," + IncAmount.Text + "," + EmpIdleb.Text + ")";
                     SqlCommand cmd = new SqlCommand(Query, Con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Income Saved Seccessfully");
                     Con.Close();
-                    PopulateExp();
-                    clearExp();
+                    PopulateInc();
+                    clearInc();
 
 
                 }
