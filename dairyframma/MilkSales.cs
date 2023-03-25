@@ -93,5 +93,33 @@ namespace dairyframma
             int total = Convert.ToInt32(Price.Text) * Convert.ToInt32(QuantityTb.Text) ;
             TotalTb.Text = "" + total;
         }
+
+        private void Save_Click(object sender, EventArgs e)
+        {
+            if (CowIdcb.SelectedIndex == -1 || CowNaTb.Text == "" || AmMilkTb.Text == "" || NoonMilkTb.Text == "" || PmMilkTb.Text == "" || TotalMilkTb.Text == "")
+            {
+                MessageBox.Show("Missing Information");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    String Query = "insert into MilkTb Values(" + CowIdcb.SelectedValue.ToString() + ", '" + CowNaTb.Text + "'," + AmMilkTb.Text + "," + NoonMilkTb.Text + "," + PmMilkTb.Text + " ," + TotalMilkTb.Text + ",'" + Date.Value.Date + "')";
+                    SqlCommand cmd = new SqlCommand(Query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Milk Saved Seccessfully");
+                    Con.Close();
+                    Populate();
+                    Clear();
+
+
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+        }
     }
 }
