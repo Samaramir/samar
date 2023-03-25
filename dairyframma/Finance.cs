@@ -40,6 +40,26 @@ namespace dairyframma
             Con.Close();
 
         }
+        private void PopulateInc()
+        {
+            Con.Open();
+            string quary = "Select * From IncomeTb1";
+            SqlDataAdapter sda = new SqlDataAdapter(quary, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            try
+            {
+                var ds = new DataSet();
+                sda.Fill(ds);
+                ExpDGV.DataSource = ds.Tables[0];
+
+            }
+            catch
+            {
+
+            }
+            Con.Close();
+
+        }
 
 
         private void label14_Click(object sender, EventArgs e)
@@ -172,10 +192,10 @@ namespace dairyframma
                 try
                 {
                     Con.Open();
-                    String Query = "insert into ExpenditureTb1 Values('" + ExpDate.Value.Date + "', '" + Purpcb.SelectedItem.ToString() + "'," + ExAmountTb.Text + "," + EmpIdleb.Text + ")";
+                    String Query = "insert into IncomeTb1 Values('" + ExpDate.Value.Date + "', '" + Purpcb.SelectedItem.ToString() + "'," + ExAmountTb.Text + "," + EmpIdleb.Text + ")";
                     SqlCommand cmd = new SqlCommand(Query, Con);
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Expenditure Saved Seccessfully");
+                    MessageBox.Show("Income Saved Seccessfully");
                     Con.Close();
                     PopulateExp();
                     clearExp();
