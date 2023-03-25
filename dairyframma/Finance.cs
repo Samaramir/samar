@@ -30,7 +30,7 @@ namespace dairyframma
             {
                 var ds = new DataSet();
                 sda.Fill(ds);
-                ExDGV.DataSource = ds.Tables[0];
+                ExpDGV.DataSource = ds.Tables[0];
 
             }
             catch
@@ -134,12 +134,12 @@ namespace dairyframma
                 try
                 {
                     Con.Open();
-                    String Query = "insert into MilkTb Values(" + CowIdcb.SelectedValue.ToString() + ", '" + CowNaTb.Text + "'," + AmMilkTb.Text + "," + NoonMilkTb.Text + "," + PmMilkTb.Text + " ," + TotalMilkTb.Text + ",'" + Date.Value.Date + "')";
+                    String Query = "insert into ExpenditureTb1 Values('" + ExpDate.Value.Date + "', '" + Purpcb.SelectedItem.ToString() + "'," + ExAmountTb.Text + "," + EmpIdleb.Text + ")";
                     SqlCommand cmd = new SqlCommand(Query, Con);
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Milk Saved Seccessfully");
+                    MessageBox.Show("Expenditure Saved Seccessfully");
                     Con.Close();
-                    Populate();
+                    PopulateExp();
                     clearExp();
 
 
