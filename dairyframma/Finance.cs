@@ -50,7 +50,7 @@ namespace dairyframma
             {
                 var ds = new DataSet();
                 sda.Fill(ds);
-                ExpDGV.DataSource = ds.Tables[0];
+                IncDGV.DataSource = ds.Tables[0];
 
             }
             catch
