@@ -61,6 +61,27 @@ namespace dairyframma
             Con.Close();
 
         }
+        private void FilterIncome()
+        {
+            Con.Open();
+            string quary = "Select * From IncomeTb1 where IncDate='" +IncDateFilter.Value.Date+"'";
+            SqlDataAdapter sda = new SqlDataAdapter(quary, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            try
+            {
+                var ds = new DataSet();
+                sda.Fill(ds);
+                IncDGV.DataSource = ds.Tables[0];
+
+            }
+            catch
+            {
+
+            }
+            Con.Close();
+
+        }
+
 
 
         private void label14_Click(object sender, EventArgs e)
@@ -211,6 +232,11 @@ namespace dairyframma
                     MessageBox.Show(Ex.Message);
                 }
             }
+        }
+
+        private void IncDateFilter_ValueChanged(object sender, EventArgs e)
+        {
+            FilterIncome();
         }
     }
 }

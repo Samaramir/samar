@@ -87,7 +87,7 @@
             this.ExAmountTb = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.IncDateFilter = new System.Windows.Forms.DateTimePicker();
             this.label28 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.IncDGV = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -718,7 +718,7 @@
             // panel15
             // 
             this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel15.Controls.Add(this.dateTimePicker3);
+            this.panel15.Controls.Add(this.IncDateFilter);
             this.panel15.Controls.Add(this.label28);
             this.panel15.Controls.Add(this.label13);
             this.panel15.Controls.Add(this.IncDGV);
@@ -736,12 +736,13 @@
             this.panel15.Size = new System.Drawing.Size(768, 303);
             this.panel15.TabIndex = 150;
             // 
-            // dateTimePicker3
+            // IncDateFilter
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(453, 46);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(177, 26);
-            this.dateTimePicker3.TabIndex = 162;
+            this.IncDateFilter.Location = new System.Drawing.Point(453, 46);
+            this.IncDateFilter.Name = "IncDateFilter";
+            this.IncDateFilter.Size = new System.Drawing.Size(177, 26);
+            this.IncDateFilter.TabIndex = 162;
+            this.IncDateFilter.ValueChanged += new System.EventHandler(this.IncDateFilter_ValueChanged);
             // 
             // label28
             // 
@@ -1044,7 +1045,7 @@
         private System.Windows.Forms.DateTimePicker ExpDate;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker IncDateFilter;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label13;
         private Guna.UI2.WinForms.Guna2DataGridView IncDGV;
