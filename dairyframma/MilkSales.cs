@@ -96,7 +96,7 @@ namespace dairyframma
 
         private void Save_Click(object sender, EventArgs e)
         {
-            if (CowIdcb.SelectedIndex == -1 || CowNaTb.Text == "" || AmMilkTb.Text == "" || NoonMilkTb.Text == "" || PmMilkTb.Text == "" || TotalMilkTb.Text == "")
+            if (EmpIdCb.SelectedIndex == -1 || Price.Text == "" || ClientName.Text == "" || PhoneTb.Text == "" || QuantityTb.Text == "" || TotalTb.Text == "")
             {
                 MessageBox.Show("Missing Information");
             }
@@ -105,13 +105,13 @@ namespace dairyframma
                 try
                 {
                     Con.Open();
-                    String Query = "insert into MilkTb Values(" + CowIdcb.SelectedValue.ToString() + ", '" + CowNaTb.Text + "'," + AmMilkTb.Text + "," + NoonMilkTb.Text + "," + PmMilkTb.Text + " ," + TotalMilkTb.Text + ",'" + Date.Value.Date + "')";
+                    String Query = "insert into MilkSalesTb1 Values(" + Date.Value.Date + ", '" + Price.Text + "'," + ClientName.Text + "," + PhoneTb.Text + "," +EmpIdCb.SelectedValue.ToString() + " ," + QuantityTb.Text + ",'" + TotalTb.Text + "')";
                     SqlCommand cmd = new SqlCommand(Query, Con);
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Milk Saved Seccessfully");
+                    MessageBox.Show("Milk Sold Seccessfully");
                     Con.Close();
                     Populate();
-                    Clear();
+                   // Clear();
 
 
                 }
