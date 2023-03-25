@@ -236,7 +236,7 @@ namespace dairyframma
 
         private void IncDateFilter_ValueChanged(object sender, EventArgs e)
         {
-            
+            FilterIncome();
         }
     }
 }
