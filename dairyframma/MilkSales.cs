@@ -131,7 +131,7 @@ namespace dairyframma
 
         private void Clear_Click(object sender, EventArgs e)
         {
-           // clear();
+           clear();
         }
     }
 }
