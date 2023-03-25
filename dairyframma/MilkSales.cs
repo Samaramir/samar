@@ -16,10 +16,34 @@ namespace dairyframma
         public MilkSales()
         {
             InitializeComponent();
+            FillEmpId();
             Populate();
         }
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\samar\Documents\DairyFarmDb.mdf;Integrated Security=True;Connect Timeout=30");
+        private void FillEmpId()
+        {
+            Con.Open();
+            SqlCommand cmd = new SqlCommand("Select EmpId From EmployeeTb1", Con);
+            SqlDataReader Rdr;
 
+            try
+            {
+                Rdr = cmd.ExecuteReader();
+
+                DataTable dt = new DataTable();
+                dt.Columns.Add("EmpId", typeof(int));
+                dt.Load(Rdr);
+                EmpIdCb.ValueMember = "EmpId";
+                EmpIdCb.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+
+            Con.Close();
+        }
         private void Populate()
         {
             Con.Open();
