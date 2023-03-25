@@ -125,6 +125,26 @@ namespace dairyframma
             PhoneTb.Text = "";
             TotalTb.Text = "";
         }
+        private void SaveTranscation()
+        {
+                { 
+                    try
+                    {
+                        String Sales = "Sales";
+                        Con.Open();
+                        String Query = "insert into IncomeTb1 Values('" + Date.Value.Date + "', '" + Sales + "'," +TotalTb.Text + "," + EmpIdCb.SelectedValue.ToString() + ")";
+                        SqlCommand cmd = new SqlCommand(Query, Con);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Income Saved Seccessfully");
+                        Con.Close();
+                        }
+                    catch (Exception Ex)
+                    {
+                        MessageBox.Show(Ex.Message);
+                    }
+                }
+            
+        }
         private void Save_Click(object sender, EventArgs e)
         {
             if (EmpIdCb.SelectedIndex == -1 || Price.Text == "" || ClientName.Text == "" || PhoneTb.Text == "" || QuantityTb.Text == "" || TotalTb.Text == "")
