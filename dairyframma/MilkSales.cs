@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,29 @@ namespace dairyframma
         public MilkSales()
         {
             InitializeComponent();
+            Populate();
+        }
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\samar\Documents\DairyFarmDb.mdf;Integrated Security=True;Connect Timeout=30");
+
+        private void Populate()
+        {
+            Con.Open();
+            string quary = "Select * From MilkSalesTb1";
+            SqlDataAdapter sda = new SqlDataAdapter(quary, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            try
+            {
+                var ds = new DataSet();
+                sda.Fill(ds);
+                SalasGV.DataSource = ds.Tables[0];
+
+            }
+            catch
+            {
+
+            }
+            Con.Close();
+
         }
 
         private void label19_Click(object sender, EventArgs e)
@@ -57,6 +81,17 @@ namespace dairyframma
             DashBoard ob = new DashBoard();
             ob.Show();
             this.Hide();
+        }
+
+        private void MilkSales_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void QuantityTb_Leave(object sender, EventArgs e)
+        {
+            int total = Convert.ToInt32(Price.Text) * Convert.ToInt32(QuantityTb.Text) ;
+            TotalTb.Text = "" + total;
         }
     }
 }
