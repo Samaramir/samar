@@ -17,7 +17,7 @@ namespace dairyframma
         {
             InitializeComponent();
             FillEmpId();
-            //Populate();
+            Populate();
         }
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\samar\Documents\DairyFarmDb.mdf;Integrated Security=True;Connect Timeout=30");
         private void FillEmpId()
