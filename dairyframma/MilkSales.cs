@@ -93,7 +93,14 @@ namespace dairyframma
             int total = Convert.ToInt32(Price.Text) * Convert.ToInt32(QuantityTb.Text) ;
             TotalTb.Text = "" + total;
         }
-
+        private void clear()
+        {
+            Price.Text = "";
+            QuantityTb.Text = "";
+            ClientName.Text = "";
+            PhoneTb.Text = "";
+            TotalTb.Text = "";
+        }
         private void Save_Click(object sender, EventArgs e)
         {
             if (EmpIdCb.SelectedIndex == -1 || Price.Text == "" || ClientName.Text == "" || PhoneTb.Text == "" || QuantityTb.Text == "" || TotalTb.Text == "")
@@ -111,7 +118,7 @@ namespace dairyframma
                     MessageBox.Show("Milk Sold Seccessfully");
                     Con.Close();
                     Populate();
-                   Clear();
+                   //Clear();
 
 
                 }
