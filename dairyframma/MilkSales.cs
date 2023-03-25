@@ -118,7 +118,7 @@ namespace dairyframma
                     MessageBox.Show("Milk Sold Seccessfully");
                     Con.Close();
                     Populate();
-                   //Clear();
+                    clear();
 
 
                 }
@@ -127,6 +127,11 @@ namespace dairyframma
                     MessageBox.Show(Ex.Message);
                 }
             }
+        }
+
+        private void Clear_Click(object sender, EventArgs e)
+        {
+           // clear();
         }
     }
 }
