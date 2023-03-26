@@ -241,7 +241,7 @@ namespace dairyframma
 
         private void pictureBox12_Click(object sender, EventArgs e)
         {
-            PopulateInc();
+            PopulateInc()
         }
     }
 }
