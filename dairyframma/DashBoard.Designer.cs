@@ -76,9 +76,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -125,7 +122,6 @@
             this.panel14.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
             this.panel15.SuspendLayout();
-            this.guna2GradientPanel4.SuspendLayout();
             this.guna2GradientPanel5.SuspendLayout();
             this.guna2GradientPanel6.SuspendLayout();
             this.guna2GradientPanel7.SuspendLayout();
@@ -630,7 +626,6 @@
             // 
             // panel15
             // 
-            this.panel15.Controls.Add(this.guna2GradientPanel4);
             this.panel15.Controls.Add(this.guna2GradientPanel5);
             this.panel15.Controls.Add(this.label26);
             this.panel15.Controls.Add(this.guna2GradientPanel6);
@@ -638,42 +633,6 @@
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(416, 306);
             this.panel15.TabIndex = 152;
-            // 
-            // guna2GradientPanel4
-            // 
-            this.guna2GradientPanel4.BorderRadius = 15;
-            this.guna2GradientPanel4.Controls.Add(this.label13);
-            this.guna2GradientPanel4.Controls.Add(this.label14);
-            this.guna2GradientPanel4.FillColor = System.Drawing.Color.Lime;
-            this.guna2GradientPanel4.FillColor2 = System.Drawing.Color.Green;
-            this.guna2GradientPanel4.Location = new System.Drawing.Point(140, 191);
-            this.guna2GradientPanel4.Name = "guna2GradientPanel4";
-            this.guna2GradientPanel4.Size = new System.Drawing.Size(184, 100);
-            this.guna2GradientPanel4.TabIndex = 152;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(42, 53);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(111, 25);
-            this.label13.TabIndex = 151;
-            this.label13.Text = "EmpName";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(35, 9);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(118, 25);
-            this.label14.TabIndex = 149;
-            this.label14.Text = "Employees";
             // 
             // guna2GradientPanel5
             // 
@@ -959,8 +918,6 @@
             this.guna2GradientPanel2.PerformLayout();
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
-            this.guna2GradientPanel4.ResumeLayout(false);
-            this.guna2GradientPanel4.PerformLayout();
             this.guna2GradientPanel5.ResumeLayout(false);
             this.guna2GradientPanel5.PerformLayout();
             this.guna2GradientPanel6.ResumeLayout(false);
@@ -1025,9 +982,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel15;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel4;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel5;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
