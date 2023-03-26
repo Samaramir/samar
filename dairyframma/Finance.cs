@@ -268,5 +268,10 @@ namespace dairyframma
         {
             FilterExp();
         }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+            PopulateExp();
+        }
     }
 }
