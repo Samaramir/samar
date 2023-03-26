@@ -67,6 +67,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
@@ -107,7 +108,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(614, 55);
+            this.label25.Location = new System.Drawing.Point(638, 44);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(128, 25);
             this.label25.TabIndex = 148;
@@ -490,11 +491,22 @@
             this.panel2.Size = new System.Drawing.Size(1109, 41);
             this.panel2.TabIndex = 131;
             // 
+            // guna2GradientPanel1
+            // 
+            this.guna2GradientPanel1.BorderRadius = 15;
+            this.guna2GradientPanel1.FillColor = System.Drawing.Color.Lime;
+            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.Green;
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(278, 123);
+            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(350, 173);
+            this.guna2GradientPanel1.TabIndex = 149;
+            // 
             // DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1109, 692);
+            this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
@@ -587,5 +599,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
     }
 }
