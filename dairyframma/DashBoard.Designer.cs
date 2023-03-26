@@ -93,6 +93,10 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.guna2GradientPanel7 = new Guna.UI2.WinForms.Guna2GradientPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
@@ -126,6 +130,7 @@
             this.guna2GradientPanel8.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
             this.guna2GradientPanel4.SuspendLayout();
+            this.guna2GradientPanel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox6
@@ -839,12 +844,64 @@
             this.guna2GradientPanel4.Size = new System.Drawing.Size(184, 100);
             this.guna2GradientPanel4.TabIndex = 152;
             // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.BackColor = System.Drawing.Color.Transparent;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.White;
+            this.label30.Location = new System.Drawing.Point(81, 9);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(133, 25);
+            this.label30.TabIndex = 149;
+            this.label30.Text = "Hights Sales";
+            this.label30.Click += new System.EventHandler(this.label30_Click);
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.BackColor = System.Drawing.Color.Transparent;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.White;
+            this.label29.Location = new System.Drawing.Point(30, 69);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(40, 25);
+            this.label29.TabIndex = 150;
+            this.label29.Text = "Rs";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.BackColor = System.Drawing.Color.Transparent;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.White;
+            this.label33.Location = new System.Drawing.Point(78, 128);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(106, 25);
+            this.label33.TabIndex = 151;
+            this.label33.Text = "Sale Date";
+            this.label33.Click += new System.EventHandler(this.label33_Click);
+            // 
+            // guna2GradientPanel7
+            // 
+            this.guna2GradientPanel7.BorderRadius = 15;
+            this.guna2GradientPanel7.Controls.Add(this.label33);
+            this.guna2GradientPanel7.Controls.Add(this.label29);
+            this.guna2GradientPanel7.Controls.Add(this.label30);
+            this.guna2GradientPanel7.FillColor = System.Drawing.Color.Lime;
+            this.guna2GradientPanel7.FillColor2 = System.Drawing.Color.Green;
+            this.guna2GradientPanel7.Location = new System.Drawing.Point(295, 468);
+            this.guna2GradientPanel7.Name = "guna2GradientPanel7";
+            this.guna2GradientPanel7.Size = new System.Drawing.Size(328, 170);
+            this.guna2GradientPanel7.TabIndex = 153;
+            // 
             // DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1109, 692);
             this.Controls.Add(this.guna2GradientPanel8);
+            this.Controls.Add(this.guna2GradientPanel7);
             this.Controls.Add(this.panel15);
             this.Controls.Add(this.panel14);
             this.Controls.Add(this.label25);
@@ -912,6 +969,8 @@
             this.guna2GradientPanel3.PerformLayout();
             this.guna2GradientPanel4.ResumeLayout(false);
             this.guna2GradientPanel4.PerformLayout();
+            this.guna2GradientPanel7.ResumeLayout(false);
+            this.guna2GradientPanel7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -983,5 +1042,9 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel4;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label33;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel7;
     }
 }
