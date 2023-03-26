@@ -191,7 +191,7 @@ namespace dairyframma
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (Purpcb.SelectedIndex == -1 || ExAmountTb.Text == "")
+            if (Purpcb.SelectedIndex == -1 || ExAmountTb.Text == ""||EmpIdcb.SelectedIndex==-1)
             {
                 MessageBox.Show("Missing Information");
             }
