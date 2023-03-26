@@ -101,7 +101,10 @@ namespace dairyframma
         {
 
         }
+        private void Finance()
+        {
 
+        }
         private void label6_Click(object sender, EventArgs e)
         {
 
