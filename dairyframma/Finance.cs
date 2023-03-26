@@ -18,6 +18,7 @@ namespace dairyframma
             InitializeComponent();
             PopulateExp();
             PopulateInc();
+            FillEmpId();
         }
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\samar\Documents\DairyFarmDb.mdf;Integrated Security=True;Connect Timeout=30");
        
@@ -219,6 +220,30 @@ namespace dairyframma
         private void bunifuMaterialTextbox1_OnValueChanged(object sender, EventArgs e)
         {
 
+        }
+        private void FillEmpId()
+        {
+            Con.Open();
+            SqlCommand cmd = new SqlCommand("Select EmpId From EmployeeTb1", Con);
+            SqlDataReader Rdr;
+
+            try
+            {
+                Rdr = cmd.ExecuteReader();
+
+                DataTable dt = new DataTable();
+                dt.Columns.Add("EmpId", typeof(int));
+                dt.Load(Rdr);
+               EmpIdcb.ValueMember = "EmpId";
+               EmpIdcb.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+
+            Con.Close();
         }
         private void clearInc()
         {
