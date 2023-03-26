@@ -200,7 +200,7 @@ namespace dairyframma
                 try
                 {
                     Con.Open();
-                    String Query = "insert into ExpenditureTb1 Values('" + ExpDate.Value.Date + "', '" + Purpcb.SelectedItem.ToString() + "'," + ExAmountTb.Text + "," + EmpIdleb.Text + ")";
+                    String Query = "insert into ExpenditureTb1 Values('" + ExpDate.Value.Date + "', '" + Purpcb.SelectedItem.ToString() + "'," + ExAmountTb.Text + "," + EmpIdcb.SelectedValue.ToString()+ ")";
                     SqlCommand cmd = new SqlCommand(Query, Con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Expenditure Saved Seccessfully");
