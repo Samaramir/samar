@@ -266,7 +266,7 @@ namespace dairyframma
 
         private void ExDateFilter_ValueChanged(object sender, EventArgs e)
         {
-             
+            FilterExp();
         }
     }
 }
