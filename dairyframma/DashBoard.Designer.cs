@@ -729,8 +729,8 @@
             this.guna2GradientPanel8.Controls.Add(this.label34);
             this.guna2GradientPanel8.Controls.Add(this.label31);
             this.guna2GradientPanel8.Controls.Add(this.label32);
-            this.guna2GradientPanel8.FillColor = System.Drawing.Color.Lime;
-            this.guna2GradientPanel8.FillColor2 = System.Drawing.Color.Green;
+            this.guna2GradientPanel8.FillColor = System.Drawing.Color.Red;
+            this.guna2GradientPanel8.FillColor2 = System.Drawing.Color.Red;
             this.guna2GradientPanel8.Location = new System.Drawing.Point(710, 468);
             this.guna2GradientPanel8.Name = "guna2GradientPanel8";
             this.guna2GradientPanel8.Size = new System.Drawing.Size(363, 170);
@@ -888,8 +888,8 @@
             this.guna2GradientPanel7.Controls.Add(this.label33);
             this.guna2GradientPanel7.Controls.Add(this.label29);
             this.guna2GradientPanel7.Controls.Add(this.label30);
-            this.guna2GradientPanel7.FillColor = System.Drawing.Color.Lime;
-            this.guna2GradientPanel7.FillColor2 = System.Drawing.Color.Green;
+            this.guna2GradientPanel7.FillColor = System.Drawing.Color.Blue;
+            this.guna2GradientPanel7.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.guna2GradientPanel7.Location = new System.Drawing.Point(295, 468);
             this.guna2GradientPanel7.Name = "guna2GradientPanel7";
             this.guna2GradientPanel7.Size = new System.Drawing.Size(328, 170);
