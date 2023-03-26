@@ -81,6 +81,26 @@ namespace dairyframma
             Con.Close();
 
         }
+        private void FilterExp()
+        {
+            Con.Open();
+            string quary = "Select * From ExpenditureTb1 where ExpcDate='" + ExDateFilter.Value.Date + "'";
+            SqlDataAdapter sda = new SqlDataAdapter(quary, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            try
+            {
+                var ds = new DataSet();
+                sda.Fill(ds);
+                ExpDGV.DataSource = ds.Tables[0];
+
+            }
+            catch
+            {
+
+            }
+            Con.Close();
+
+        }
 
 
 
@@ -242,6 +262,11 @@ namespace dairyframma
         private void pictureBox12_Click(object sender, EventArgs e)
         {
             PopulateInc();
+        }
+
+        private void ExDateFilter_ValueChanged(object sender, EventArgs e)
+        {
+             
         }
     }
 }
