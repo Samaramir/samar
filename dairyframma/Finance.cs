@@ -262,7 +262,7 @@ namespace dairyframma
                 try
                 {
                     Con.Open();
-                    String Query = "insert into IncomeTb1 Values('" + IncDate.Value.Date + "', '" +IncPurcb.SelectedItem.ToString() + "'," + IncAmount.Text + "," + EmpIdleb.Text + ")";
+                    String Query = "insert into IncomeTb1 Values('" + IncDate.Value.Date + "', '" +IncPurcb.SelectedItem.ToString() + "'," + IncAmount.Text + "," + EmpIdcb.SelectedValue.ToString() + ")";
                     SqlCommand cmd = new SqlCommand(Query, Con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Income Saved Seccessfully");
