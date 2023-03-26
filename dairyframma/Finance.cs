@@ -205,7 +205,7 @@ namespace dairyframma
                     MessageBox.Show("Expenditure Saved Seccessfully");
                     Con.Close();
                     PopulateExp();
-                    //clearExp();
+                    clearExp();
 
 
                 }
