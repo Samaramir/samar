@@ -16,6 +16,7 @@ namespace dairyframma
         public DashBoard()
         {
             InitializeComponent();
+            Finance();
         }
 
         private void label19_Click(object sender, EventArgs e)
@@ -105,8 +106,15 @@ namespace dairyframma
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\samar\Documents\DairyFarmDb.mdf;Integrated Security=True;Connect Timeout=30");
         private void Finance()
         {
-
+            Con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter("Select sum(IncAmt) from IncomeTb1", Con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            incblb.Text = dt.Rows[0][0].ToString();
+            Con.Close();
         }
+
+    
         private void label6_Click(object sender, EventArgs e)
         {
 
