@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.LinkLabel;
 
 namespace dairyframma
 {
@@ -17,6 +18,8 @@ namespace dairyframma
         {
             InitializeComponent();
             Finance();
+            LogistecCalc();
+            getMax();
         }
 
         private void label19_Click(object sender, EventArgs e)
@@ -123,8 +126,28 @@ namespace dairyframma
             Ballb.Text = "Rs" + bal;
             Con.Close();
         }
+        private void LogistecCalc()
+        {
+            String Query = "Select count(*) from CowTbl";
+            LCow.Text = Con.GetData(Query).Rows[0][0].ToString();
 
-    
+            String Query2 = "Select sum(TotalMilk) from MilkTbl";
+            LMilk.Text = Con.GetData(Query2).Rows[0][0].ToString() + " Litters";
+
+            String Query3 = "Select count(*) from EmpTbl";
+            LEmp.Text = Con.GetData(Query3).Rows[0][0].ToString();
+        }
+
+        private void getMax()
+        {
+            String Query = "Select Max(IncAmount) from IncomeTbl";
+            SMax.Text = "$ " + Con.GetData(Query).Rows[0][0].ToString();
+
+            String Query2 = "Select Max(ExpAmount) from ExpenditureTbl";
+            ExpMax.Text = "$ " + Con.GetData(Query2).Rows[0][0].ToString();
+        }
+
+
         private void label6_Click(object sender, EventArgs e)
         {
 

@@ -37,10 +37,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lab = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.UserName = new System.Windows.Forms.TextBox();
+            this.Password = new System.Windows.Forms.TextBox();
+            this.RoleCb = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -127,31 +128,31 @@
             this.lab.TabIndex = 7;
             this.lab.Text = "Password";
             // 
-            // textBox1
+            // UserName
             // 
-            this.textBox1.Location = new System.Drawing.Point(299, 218);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(210, 29);
-            this.textBox1.TabIndex = 8;
+            this.UserName.Location = new System.Drawing.Point(299, 218);
+            this.UserName.Name = "UserName";
+            this.UserName.Size = new System.Drawing.Size(210, 29);
+            this.UserName.TabIndex = 8;
             // 
-            // textBox2
+            // Password
             // 
-            this.textBox2.Location = new System.Drawing.Point(299, 273);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(210, 29);
-            this.textBox2.TabIndex = 9;
+            this.Password.Location = new System.Drawing.Point(299, 273);
+            this.Password.Name = "Password";
+            this.Password.Size = new System.Drawing.Size(210, 29);
+            this.Password.TabIndex = 9;
             // 
-            // comboBox1
+            // RoleCb
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.RoleCb.FormattingEnabled = true;
+            this.RoleCb.Items.AddRange(new object[] {
             "Admin",
             "Employee"});
-            this.comboBox1.Location = new System.Drawing.Point(271, 170);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(178, 32);
-            this.comboBox1.TabIndex = 11;
-            this.comboBox1.Text = "Selected Row";
+            this.RoleCb.Location = new System.Drawing.Point(271, 170);
+            this.RoleCb.Name = "RoleCb";
+            this.RoleCb.Size = new System.Drawing.Size(178, 32);
+            this.RoleCb.TabIndex = 11;
+            this.RoleCb.Text = "Selected Row";
             // 
             // label6
             // 
@@ -162,16 +163,28 @@
             this.label6.Size = new System.Drawing.Size(52, 20);
             this.label6.TabIndex = 13;
             this.label6.Text = "Reste";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(299, 320);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(136, 51);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Login";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(551, 413);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.RoleCb);
+            this.Controls.Add(this.Password);
+            this.Controls.Add(this.UserName);
             this.Controls.Add(this.lab);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -202,9 +215,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lab;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox UserName;
+        private System.Windows.Forms.TextBox Password;
+        private System.Windows.Forms.ComboBox RoleCb;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button1;
     }
 }
