@@ -300,5 +300,10 @@ namespace dairyframma
                 }
             }
         }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
