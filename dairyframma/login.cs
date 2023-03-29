@@ -78,7 +78,8 @@ namespace dairyframma
         private void label6_Click(object sender, EventArgs e)
         {
             UserName.Text = "";
-            Password.Text = "";
+            Passwor.Text = "";
+
         }
     }
 }
