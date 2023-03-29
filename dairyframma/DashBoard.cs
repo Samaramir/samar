@@ -18,8 +18,8 @@ namespace dairyframma
         {
             InitializeComponent();
             Finance();
-            LogistecCalc();
-            getMax();
+            Logistic();
+            GetMax();
         }
 
         private void label19_Click(object sender, EventArgs e)
@@ -126,25 +126,37 @@ namespace dairyframma
             Ballb.Text = "Rs" + bal;
             Con.Close();
         }
-        private void LogistecCalc()
+        private void GetMax()
         {
-            String Query = "Select count(*) from CowTbl";
-            LCow.Text = Con.GetData(Query).Rows[0][0].ToString();
-
-            String Query2 = "Select sum(TotalMilk) from MilkTbl";
-            LMilk.Text = Con.GetData(Query2).Rows[0][0].ToString() + " Litters";
-
-            String Query3 = "Select count(*) from EmpTbl";
-            LEmp.Text = Con.GetData(Query3).Rows[0][0].ToString();
+            Con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter("select Max(IncAmt) from IncomeTbl", Con);
+            SqlDataAdapter sda1 = new SqlDataAdapter("select Max(ExpAmount) from ExpenditureTbl", Con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            SMax.Text = "Rs " + dt.Rows[0][0].ToString();
+            DataTable dt1 = new DataTable();
+            sda1.Fill(dt1);
+            ExpMax.Text = "Rs " + dt1.Rows[0][0].ToString();
+            Con.Close();
         }
 
-        private void getMax()
+        private void Logistic()
         {
-            String Query = "Select Max(IncAmount) from IncomeTbl";
-            SMax.Text = "$ " + Con.GetData(Query).Rows[0][0].ToString();
+            Con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter("select Count(*) from CowsTbl", Con);
+            SqlDataAdapter sda1 = new SqlDataAdapter("select Sum(TotalMilk) from MilkTbl", Con);
+            SqlDataAdapter sda2 = new SqlDataAdapter("select Count(*) from EmployeeTbl", Con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            LCow.Text = dt.Rows[0][0].ToString();
+            DataTable dt1 = new DataTable();
+            sda1.Fill(dt1);
+            LMilk.Text = dt1.Rows[0][0].ToString() + " " + "Liters";
+            DataTable dt2 = new DataTable();
+            sda2.Fill(dt2);
+            LEmp.Text = dt2.Rows[0][0].ToString();
+            Con.Close();
 
-            String Query2 = "Select Max(ExpAmount) from ExpenditureTbl";
-            ExpMax.Text = "$ " + Con.GetData(Query2).Rows[0][0].ToString();
         }
 
 
