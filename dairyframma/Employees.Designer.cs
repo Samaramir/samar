@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employees));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DOB = new System.Windows.Forms.DateTimePicker();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label24 = new System.Windows.Forms.Label();
@@ -67,6 +67,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.GenCb = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.EmppassTb = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel6.SuspendLayout();
@@ -145,7 +147,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(213, 788);
+            this.panel6.Size = new System.Drawing.Size(213, 749);
             this.panel6.TabIndex = 13;
             // 
             // panel3
@@ -278,26 +280,26 @@
             // 
             // EmployeeDGV
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.EmployeeDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EmployeeDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.EmployeeDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EmployeeDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.EmployeeDGV.ColumnHeadersHeight = 4;
             this.EmployeeDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.EmployeeDGV.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.EmployeeDGV.DefaultCellStyle = dataGridViewCellStyle3;
             this.EmployeeDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.EmployeeDGV.Location = new System.Drawing.Point(254, 397);
             this.EmployeeDGV.Name = "EmployeeDGV";
@@ -331,7 +333,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(379, 95);
+            this.label6.Location = new System.Drawing.Point(325, 95);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 20);
             this.label6.TabIndex = 92;
@@ -349,10 +351,10 @@
             this.AddressTb.LineIdleColor = System.Drawing.Color.Gray;
             this.AddressTb.LineMouseHoverColor = System.Drawing.Color.MidnightBlue;
             this.AddressTb.LineThickness = 4;
-            this.AddressTb.Location = new System.Drawing.Point(743, 220);
+            this.AddressTb.Location = new System.Drawing.Point(916, 211);
             this.AddressTb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AddressTb.Name = "AddressTb";
-            this.AddressTb.Size = new System.Drawing.Size(177, 28);
+            this.AddressTb.Size = new System.Drawing.Size(177, 34);
             this.AddressTb.TabIndex = 89;
             this.AddressTb.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -360,7 +362,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(745, 191);
+            this.label14.Location = new System.Drawing.Point(918, 188);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(68, 20);
             this.label14.TabIndex = 88;
@@ -378,10 +380,10 @@
             this.PhoneTb.LineIdleColor = System.Drawing.Color.Gray;
             this.PhoneTb.LineMouseHoverColor = System.Drawing.Color.MidnightBlue;
             this.PhoneTb.LineThickness = 4;
-            this.PhoneTb.Location = new System.Drawing.Point(479, 220);
+            this.PhoneTb.Location = new System.Drawing.Point(652, 211);
             this.PhoneTb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PhoneTb.Name = "PhoneTb";
-            this.PhoneTb.Size = new System.Drawing.Size(177, 28);
+            this.PhoneTb.Size = new System.Drawing.Size(177, 34);
             this.PhoneTb.TabIndex = 87;
             this.PhoneTb.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -389,7 +391,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(476, 191);
+            this.label13.Location = new System.Drawing.Point(649, 188);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(55, 20);
             this.label13.TabIndex = 86;
@@ -428,7 +430,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(449, 96);
+            this.label8.Location = new System.Drawing.Point(395, 96);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(0, 25);
             this.label8.TabIndex = 79;
@@ -445,7 +447,7 @@
             this.EmpName.LineIdleColor = System.Drawing.Color.Gray;
             this.EmpName.LineMouseHoverColor = System.Drawing.Color.MidnightBlue;
             this.EmpName.LineThickness = 4;
-            this.EmpName.Location = new System.Drawing.Point(377, 126);
+            this.EmpName.Location = new System.Drawing.Point(323, 126);
             this.EmpName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EmpName.Name = "EmpName";
             this.EmpName.Size = new System.Drawing.Size(177, 28);
@@ -468,7 +470,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(213, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1173, 41);
+            this.panel2.Size = new System.Drawing.Size(1157, 41);
             this.panel2.TabIndex = 76;
             // 
             // panel1
@@ -481,7 +483,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(213, 788);
+            this.panel1.Size = new System.Drawing.Size(213, 749);
             this.panel1.TabIndex = 75;
             // 
             // GenCb
@@ -495,11 +497,42 @@
             this.GenCb.Size = new System.Drawing.Size(163, 28);
             this.GenCb.TabIndex = 103;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(351, 178);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(78, 20);
+            this.label7.TabIndex = 105;
+            this.label7.Text = "Password";
+            // 
+            // EmppassTb
+            // 
+            this.EmppassTb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.EmppassTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmppassTb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.EmppassTb.HintForeColor = System.Drawing.Color.Empty;
+            this.EmppassTb.HintText = "";
+            this.EmppassTb.isPassword = false;
+            this.EmppassTb.LineFocusedColor = System.Drawing.Color.MidnightBlue;
+            this.EmppassTb.LineIdleColor = System.Drawing.Color.Gray;
+            this.EmppassTb.LineMouseHoverColor = System.Drawing.Color.MidnightBlue;
+            this.EmppassTb.LineThickness = 4;
+            this.EmppassTb.Location = new System.Drawing.Point(329, 208);
+            this.EmppassTb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.EmppassTb.Name = "EmppassTb";
+            this.EmppassTb.Size = new System.Drawing.Size(177, 34);
+            this.EmppassTb.TabIndex = 104;
+            this.EmppassTb.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // Employees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.EmppassTb);
             this.Controls.Add(this.GenCb);
             this.Controls.Add(this.DOB);
             this.Controls.Add(this.Clear);
@@ -586,5 +619,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox GenCb;
+        private System.Windows.Forms.Label label7;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox EmppassTb;
     }
 }
