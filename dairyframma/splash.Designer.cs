@@ -28,26 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(splash));
-            this.bunifuProgressBar1 = new Bunifu.Framework.UI.BunifuProgressBar();
+            this.MyProgress = new Bunifu.Framework.UI.BunifuProgressBar();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // bunifuProgressBar1
+            // MyProgress
             // 
-            this.bunifuProgressBar1.BackColor = System.Drawing.Color.Silver;
-            this.bunifuProgressBar1.BorderRadius = 5;
-            this.bunifuProgressBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bunifuProgressBar1.Location = new System.Drawing.Point(0, 379);
-            this.bunifuProgressBar1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuProgressBar1.MaximumValue = 100;
-            this.bunifuProgressBar1.Name = "bunifuProgressBar1";
-            this.bunifuProgressBar1.ProgressColor = System.Drawing.Color.Teal;
-            this.bunifuProgressBar1.Size = new System.Drawing.Size(563, 55);
-            this.bunifuProgressBar1.TabIndex = 0;
-            this.bunifuProgressBar1.Value = 0;
+            this.MyProgress.BackColor = System.Drawing.Color.Silver;
+            this.MyProgress.BorderRadius = 5;
+            this.MyProgress.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.MyProgress.Location = new System.Drawing.Point(0, 379);
+            this.MyProgress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MyProgress.MaximumValue = 100;
+            this.MyProgress.Name = "MyProgress";
+            this.MyProgress.ProgressColor = System.Drawing.Color.Teal;
+            this.MyProgress.Size = new System.Drawing.Size(563, 55);
+            this.MyProgress.TabIndex = 0;
+            this.MyProgress.Value = 0;
             // 
             // label1
             // 
@@ -69,6 +71,10 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // splash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -77,12 +83,13 @@
             this.ClientSize = new System.Drawing.Size(563, 434);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.bunifuProgressBar1);
+            this.Controls.Add(this.MyProgress);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "splash";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.splash_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -91,9 +98,10 @@
 
         #endregion
 
-        private Bunifu.Framework.UI.BunifuProgressBar bunifuProgressBar1;
+        private Bunifu.Framework.UI.BunifuProgressBar MyProgress;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
