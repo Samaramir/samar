@@ -110,7 +110,7 @@ namespace dairyframma
             SqlDataAdapter sda = new SqlDataAdapter("Select sum(IncAmt) from IncomeTb1", Con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
-            incblb.Text = dt.Rows[0][0].ToString();
+            Incleb.Text = dt.Rows[0][0].ToString();
             Con.Close();
         }
 

@@ -67,8 +67,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.incblb = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label10 = new System.Windows.Forms.Label();
+            this.Panal = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.Incleb = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
@@ -121,7 +121,7 @@
             this.panel9.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.incblb.SuspendLayout();
+            this.Panal.SuspendLayout();
             this.panel14.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
@@ -530,30 +530,30 @@
             this.panel2.Size = new System.Drawing.Size(1109, 41);
             this.panel2.TabIndex = 131;
             // 
-            // incblb
+            // Panal
             // 
-            this.incblb.BorderRadius = 15;
-            this.incblb.Controls.Add(this.label10);
-            this.incblb.Controls.Add(this.label6);
-            this.incblb.FillColor = System.Drawing.Color.Lime;
-            this.incblb.FillColor2 = System.Drawing.Color.Green;
-            this.incblb.Location = new System.Drawing.Point(14, 49);
-            this.incblb.Name = "incblb";
-            this.incblb.Size = new System.Drawing.Size(179, 112);
-            this.incblb.TabIndex = 149;
+            this.Panal.BorderRadius = 15;
+            this.Panal.Controls.Add(this.Incleb);
+            this.Panal.Controls.Add(this.label6);
+            this.Panal.FillColor = System.Drawing.Color.Lime;
+            this.Panal.FillColor2 = System.Drawing.Color.Green;
+            this.Panal.Location = new System.Drawing.Point(14, 49);
+            this.Panal.Name = "Panal";
+            this.Panal.Size = new System.Drawing.Size(179, 112);
+            this.Panal.TabIndex = 149;
             // 
-            // label10
+            // Incleb
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(59, 53);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(40, 25);
-            this.label10.TabIndex = 150;
-            this.label10.Text = "Rs";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
+            this.Incleb.AutoSize = true;
+            this.Incleb.BackColor = System.Drawing.Color.Transparent;
+            this.Incleb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Incleb.ForeColor = System.Drawing.Color.White;
+            this.Incleb.Location = new System.Drawing.Point(59, 53);
+            this.Incleb.Name = "Incleb";
+            this.Incleb.Size = new System.Drawing.Size(40, 25);
+            this.Incleb.TabIndex = 150;
+            this.Incleb.Text = "Rs";
+            this.Incleb.Click += new System.EventHandler(this.label10_Click);
             // 
             // label6
             // 
@@ -573,7 +573,7 @@
             this.panel14.Controls.Add(this.guna2GradientPanel3);
             this.panel14.Controls.Add(this.guna2GradientPanel2);
             this.panel14.Controls.Add(this.label7);
-            this.panel14.Controls.Add(this.incblb);
+            this.panel14.Controls.Add(this.Panal);
             this.panel14.Location = new System.Drawing.Point(246, 96);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(416, 306);
@@ -951,8 +951,8 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.incblb.ResumeLayout(false);
-            this.incblb.PerformLayout();
+            this.Panal.ResumeLayout(false);
+            this.Panal.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             this.guna2GradientPanel3.ResumeLayout(false);
@@ -1016,11 +1016,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2GradientPanel incblb;
+        private Guna.UI2.WinForms.Guna2GradientPanel Panal;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label Incleb;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label11;
