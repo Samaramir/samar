@@ -108,9 +108,19 @@ namespace dairyframma
         {
             Con.Open();
             SqlDataAdapter sda = new SqlDataAdapter("Select sum(IncAmt) from IncomeTb1", Con);
+            SqlDataAdapter sda1 = new SqlDataAdapter("Select sum(ExpAmount) from ExpenditureTb1", Con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
-            Incleb.Text = dt.Rows[0][0].ToString();
+            int inc, Exp;
+            double  bal;
+            inc = Convert.ToInt32(dt.Rows[0][0].ToString());
+            Incleb.Text ="Rs" + dt.Rows[0][0].ToString();
+            DataTable dt1 = new DataTable();
+            sda1.Fill(dt1);
+            Exp = Convert.ToInt32(dt1.Rows[0][0].ToString());
+            bal = inc - Exp;
+            Explb.Text = "Rs" + dt1.Rows[0][0].ToString();
+            Ballb.Text = "Rs" + bal;
             Con.Close();
         }
 

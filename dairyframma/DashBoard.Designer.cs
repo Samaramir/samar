@@ -72,10 +72,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label12 = new System.Windows.Forms.Label();
+            this.Ballb = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label11 = new System.Windows.Forms.Label();
+            this.Explb = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
@@ -548,7 +548,7 @@
             this.Incleb.BackColor = System.Drawing.Color.Transparent;
             this.Incleb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Incleb.ForeColor = System.Drawing.Color.White;
-            this.Incleb.Location = new System.Drawing.Point(59, 53);
+            this.Incleb.Location = new System.Drawing.Point(7, 53);
             this.Incleb.Name = "Incleb";
             this.Incleb.Size = new System.Drawing.Size(40, 25);
             this.Incleb.TabIndex = 150;
@@ -570,6 +570,7 @@
             // 
             // panel14
             // 
+            this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel14.Controls.Add(this.guna2GradientPanel3);
             this.panel14.Controls.Add(this.guna2GradientPanel2);
             this.panel14.Controls.Add(this.label7);
@@ -583,26 +584,26 @@
             // guna2GradientPanel3
             // 
             this.guna2GradientPanel3.BorderRadius = 15;
-            this.guna2GradientPanel3.Controls.Add(this.label12);
+            this.guna2GradientPanel3.Controls.Add(this.Ballb);
             this.guna2GradientPanel3.Controls.Add(this.label9);
             this.guna2GradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.guna2GradientPanel3.FillColor2 = System.Drawing.Color.Magenta;
             this.guna2GradientPanel3.Location = new System.Drawing.Point(114, 183);
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
-            this.guna2GradientPanel3.Size = new System.Drawing.Size(179, 100);
+            this.guna2GradientPanel3.Size = new System.Drawing.Size(190, 100);
             this.guna2GradientPanel3.TabIndex = 152;
             // 
-            // label12
+            // Ballb
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(60, 53);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(40, 25);
-            this.label12.TabIndex = 151;
-            this.label12.Text = "Rs";
+            this.Ballb.AutoSize = true;
+            this.Ballb.BackColor = System.Drawing.Color.Transparent;
+            this.Ballb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ballb.ForeColor = System.Drawing.Color.White;
+            this.Ballb.Location = new System.Drawing.Point(11, 53);
+            this.Ballb.Name = "Ballb";
+            this.Ballb.Size = new System.Drawing.Size(40, 25);
+            this.Ballb.TabIndex = 151;
+            this.Ballb.Text = "Rs";
             // 
             // label9
             // 
@@ -610,7 +611,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(46, 9);
+            this.label9.Location = new System.Drawing.Point(52, 9);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(90, 25);
             this.label9.TabIndex = 149;
@@ -619,7 +620,7 @@
             // guna2GradientPanel2
             // 
             this.guna2GradientPanel2.BorderRadius = 15;
-            this.guna2GradientPanel2.Controls.Add(this.label11);
+            this.guna2GradientPanel2.Controls.Add(this.Explb);
             this.guna2GradientPanel2.Controls.Add(this.label8);
             this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.Magenta;
@@ -628,17 +629,17 @@
             this.guna2GradientPanel2.Size = new System.Drawing.Size(182, 112);
             this.guna2GradientPanel2.TabIndex = 151;
             // 
-            // label11
+            // Explb
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(66, 54);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(40, 25);
-            this.label11.TabIndex = 151;
-            this.label11.Text = "Rs";
+            this.Explb.AutoSize = true;
+            this.Explb.BackColor = System.Drawing.Color.Transparent;
+            this.Explb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Explb.ForeColor = System.Drawing.Color.White;
+            this.Explb.Location = new System.Drawing.Point(9, 54);
+            this.Explb.Name = "Explb";
+            this.Explb.Size = new System.Drawing.Size(40, 25);
+            this.Explb.TabIndex = 151;
+            this.Explb.Text = "Rs";
             // 
             // label8
             // 
@@ -666,6 +667,7 @@
             // 
             // panel15
             // 
+            this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel15.Controls.Add(this.guna2GradientPanel4);
             this.panel15.Controls.Add(this.guna2GradientPanel5);
             this.panel15.Controls.Add(this.label26);
@@ -1023,7 +1025,7 @@
         private System.Windows.Forms.Label Incleb;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label Explb;
         private System.Windows.Forms.Panel panel15;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel5;
         private System.Windows.Forms.Label label15;
@@ -1037,7 +1039,7 @@
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label34;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label Ballb;
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel4;
         private System.Windows.Forms.Label label13;
