@@ -298,5 +298,10 @@ namespace dairyframma
         {
             PopulateExp();
         }
+
+        private void pictureBox14_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -178,5 +178,10 @@ namespace dairyframma
         {
            clear();
         }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
